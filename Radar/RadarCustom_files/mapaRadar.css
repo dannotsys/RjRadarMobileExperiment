@@ -1,0 +1,5 @@
+#mapid { height: 600px; }
+
+.leaflet-overlay-pane {
+	transform: translate3d(-858px, -240px, 0px);
+}

@@ -1,0 +1,95 @@
+<!-- saved from url=(0057)http://alertario.rio.rj.gov.br/upload/Mapa/mapaRadar.html -->
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">    
+  <base href="./Radar/">
+
+  <link rel="stylesheet" href="./RadarCustom_files/leaflet.css">
+
+  <script src="./RadarCustom_files/leaflet.js.download"></script>
+
+  <link rel="stylesheet" href="./RadarCustom_files/all.css">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="./RadarCustom_files/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="./RadarCustom_files/jquery.min.js.download"></script>
+
+  <!-- Popper JS -->
+  <script src="./RadarCustom_files/popper.min.js.download"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="./RadarCustom_files/bootstrap.min.js.download"></script>
+
+
+  <script src="./RadarCustom_files/mapaRadar.js.download"></script>
+  <title>Document</title>
+</head>
+
+<body style="background: black">
+  <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="height: 6%">
+    <div class="btn-group">
+      <button id="backward" type="button" class="btn btn-primary"><i id="backward_icon"
+          class="fas fa-step-backward"></i></button>
+      <button id="play_pause" type="button" class="btn btn-primary"><i id="play_pause_icon"
+          class="fas fa-play"></i></button>
+      <button id="forward" type="button" class="btn btn-primary"><i id="forward_icon"
+          class="fas fa-step-forward"></i></button>
+      <button id="reload" type="button" class="btn btn-primary"><i id="reload_icon" class="fas fa-sync-alt"></i></button>
+      <div class="scandate" style="background: black;padding:6px;height:30px;max-width:100%;overflow:hidden;">
+        <img title="A" id="image_timestamp" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" style="object-fit: cover;margin-top:10px;margin-left:-40px;height: 76vh;clip-path: inset(0 69.5% 92% 5%);"></img>
+      </div>
+    </div>
+  </div>
+
+  <div id="mapid"
+    class="leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+    tabindex="0"
+    style="position: relative; height: 94% !important; outline: none;width:100% !important;">
+    <div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(604px, 152px, 0px);">
+      <div class="leaflet-pane leaflet-tile-pane">
+        <div class="leaflet-layer " style="z-index: 1; opacity: 1;">
+          <div class="leaflet-tile-container leaflet-zoom-animated"
+            style="z-index: 18; transform: translate3d(-636px, -310px, 0px) scale(1);"></div>
+          <div class="leaflet-tile-container leaflet-zoom-animated"
+            style="z-index: 17; transform: translate3d(-15px, -9px, 0px) scale(0.5);"></div>
+        </div>
+      </div>
+      <div class="leaflet-pane leaflet-shadow-pane"></div>
+      <div class="leaflet-pane leaflet-overlay-pane"><svg pointer-events="none" class="leaflet-zoom-animated"
+          width="3052" height="1058" viewBox="-858 -240 3052 1058" style="transform: translate3d(-858px, -240px, 0px);">
+          <g>
+            <path class="leaflet-interactive" stroke="#00F" stroke-opacity="1" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" stroke-dasharray="10 10" fill="none"
+              d="M167.8155730488943,297.25276098115137a494,494 0 1,0 988,0 a494,494 0 1,0 -988,0 "></path>
+          </g>
+        </svg><img class="leaflet-image-layer leaflet-zoom-animated" src="" alt=""
+          style="z-index: 1; transform: translate3d(-93px, -288px, 0px); width: 1521px; height: 1168px; "></div>
+      <div class="leaflet-pane leaflet-marker-pane"></div>
+      <div class="leaflet-pane leaflet-tooltip-pane"></div>
+      <div class="leaflet-pane leaflet-popup-pane"></div>
+      <div class="leaflet-proxy leaflet-zoom-animated"
+        style="transform: translate3d(49789.5px, 74123px, 0px) scale(256);"></div>
+    </div>
+    <div class="leaflet-control-container">
+      <div class="leaflet-top leaflet-left"></div>
+      <div class="leaflet-top leaflet-right"></div>
+      <div class="leaflet-bottom leaflet-left"></div>
+      <div class="leaflet-bottom leaflet-right">
+        <div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in"
+            href="http://alertario.rio.rj.gov.br/upload/Mapa/mapaRadar.html#" title="Zoom in" role="button"
+            aria-label="Zoom in">+</a><a class="leaflet-control-zoom-out"
+            href="http://alertario.rio.rj.gov.br/upload/Mapa/mapaRadar.html#" title="Zoom out" role="button"
+            aria-label="Zoom out">−</a></div>
+        <div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com/"
+            title="A JS library for interactive maps">Leaflet</a> | © OpenStreetMap Contributors.</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
