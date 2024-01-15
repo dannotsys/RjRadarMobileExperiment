@@ -37,7 +37,7 @@ $(document).ready(function () {
     var imagem_atual = 1;
     var play = true;
     var radar = null;
-    var baseUrl = 'http://alertario.rio.rj.gov.br/upload/Mapa/semfundo/radar';
+    var baseUrl = 'https://imagens.climatempo.com.br/georio/radar/radar';
     var query = 0;
     var imageTime = $("#image_timestamp");
 
@@ -84,7 +84,7 @@ $(document).ready(function () {
     }
 
     function proxima_imagem() {
-        if (imagem_atual < 20) {
+        if (imagem_atual < 10) {
             imagem_atual += 1;
         } else {
             imagem_atual = 1;
@@ -96,7 +96,7 @@ $(document).ready(function () {
         if (imagem_atual > 1) {
             imagem_atual -= 1;
         } else {
-            imagem_atual = 20;
+            imagem_atual = 10;
         }
         mostrar_imagem();
     }
@@ -139,12 +139,4 @@ $(document).ready(function () {
         query = Math.random()
     }
 
-    $.getJSON("str.json",
-        function (msg) {
-            if (1 != msg.id) {
-                var n = $("#str");
-                n.text(msg.descricao + " Última Atualização: " + msg.data)
-            }
-        }
-    );
 });
