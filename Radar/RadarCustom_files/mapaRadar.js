@@ -37,7 +37,7 @@ $(document).ready(function () {
     var imagem_atual = 1;
     var play = true;
     var radar = null;
-    var baseUrl = 'http://alertario.rio.rj.gov.br/upload/Mapa/semfundo/radar';
+    var baseUrl = 'https://bpyu1frhri.execute-api.us-east-1.amazonaws.com/maparadar';
     var query = 0;
     var imageTime = $("#image_timestamp");
 
