@@ -84,7 +84,7 @@ $(document).ready(function () {
     }
 
     function proxima_imagem() {
-        if (imagem_atual < 10) {
+        if (imagem_atual < 20) {
             imagem_atual += 1;
         } else {
             imagem_atual = 1;
@@ -96,7 +96,7 @@ $(document).ready(function () {
         if (imagem_atual > 1) {
             imagem_atual -= 1;
         } else {
-            imagem_atual = 10;
+            imagem_atual = 20;
         }
         mostrar_imagem();
     }
