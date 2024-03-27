@@ -27,12 +27,38 @@
 
 
 				<script src="RadarCustom_files/mapaRadar.js"></script>
-				<title>Document</title>
+				
+
+				<style>
+								:root {
+												--btn-toolbar-height: 5vh;
+								}
+
+								.btn-toolbar {
+												height: 6%;
+												min-height: var(--btn-toolbar-height);
+								}
+
+								body * .scandate {
+												height: var(--btn-toolbar-height);
+								}
+																								body * .scandate > img {
+																												margin-top: calc(var(--btn-toolbar-height) /2 - 4px)
+																								}
+
+								/* Adjust the image for smaller screens */
+								@media (max-height: 600px) {
+																								:root {
+																												--btn-toolbar-height: 10vh;
+																								}
+								}
+				</style>
+
 </head>
 
 <body style="background: black">
 
-				<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="height: 6vh">
+				<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" >
 								<div class="btn-group">
 												<button id="backward" type="button" class="btn btn-primary">
 																<i id="backward_icon"
@@ -47,8 +73,8 @@
 																			class="fas fa-step-forward"></i>
 												</button>
 												<button id="reload" type="button" class="btn btn-primary"><i id="reload_icon" class="fas fa-sync-alt"></i></button>
-												<div class="scandate" style="background: black;height:6vh;max-width:100%;overflow:hidden;">
-																<img title="A" id="image_timestamp" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" style="object-fit: cover; margin-top: 1em; margin-left: -2em; width: calc(50vw + 560px); clip-path: inset(0 69.5% 92% 5%); "></img>
+												<div class="scandate" style="background: black;max-width:100%;overflow:hidden;">
+																<img title="A" id="image_timestamp" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" style="object-fit: cover; margin-left: -2em; width: calc(50vw + 560px); clip-path: inset(0 69.5% 92% 5%); "></img>
 												</div>
 								</div>
 				</div>
