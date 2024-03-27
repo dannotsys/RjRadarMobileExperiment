@@ -108,30 +108,13 @@ $(document).ready(function () {
         carregar_imagem(url);
     }
 
-    function painel_imagens(url) {
-        try {
-            $.get(url).then(
-                function (data, status, xhr) {
-                    var date = xhr.responseText.substring(
-                        xhr.responseText.search('modify') + 7, xhr.responseText.search('modify') + 32
-                    );
-
-                }
-            );
-        }
-        catch {
-
-        }
-    }
-
     function carregar_imagem(url) {
         if (radar != null) {
             radar.remove();
         }
         radar = L.imageOverlay(url, bounds).addTo(mymap);
-        //painel_imagens(url);
 
-        imageTime.attr("src", url); 
+        imageTime.attr("src", url);
     }
 
     // função para atualizar as imagens caso esteja vindo do cache

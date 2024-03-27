@@ -11,3 +11,13 @@ body {
 .leaflet-image-layer.leaflet-zoom-animated {
   clip-path: circle(42% at 50% 50%);
 }
+
+.floating-img {
+    position: absolute;
+    bottom: 10px; /* Distance from the bottom of the viewport */
+    left: 10px; /* Distance from the left side of the viewport */
+    width: 70px; /* Set the width of the image */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1000; /* Ensure it's above most other elements */
+}
+
