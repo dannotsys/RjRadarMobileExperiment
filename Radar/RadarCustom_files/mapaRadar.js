@@ -37,9 +37,10 @@ $(document).ready(function () {
     var imagem_atual = 1;
     var play = true;
     var radar = null;
-    var baseUrl = 'https://bpyu1frhri.execute-api.us-east-1.amazonaws.com/maparadar';
+    var baseUrl = 'https://bpyu1frhri.execute-api.us-east-1.amazonaws.com/maparadar/radar';
     var query = 0;
     var imageTime = $("#image_timestamp");
+
 
     $('#play_pause').click(function () {
         play_pause();
@@ -114,7 +115,7 @@ $(document).ready(function () {
                     var date = xhr.responseText.substring(
                         xhr.responseText.search('modify') + 7, xhr.responseText.search('modify') + 32
                     );
-                    //$("#image_timestamp").html(new Date(date));
+
                 }
             );
         }
@@ -128,24 +129,15 @@ $(document).ready(function () {
             radar.remove();
         }
         radar = L.imageOverlay(url, bounds).addTo(mymap);
-        painel_imagens(url);
-        
-		imageTime.src = url;
-		
-        //imageTime.css("background-image", "url(" + url + ")"); 
+        //painel_imagens(url);
+
+        imageTime.attr("src", url); 
     }
 
     // função para atualizar as imagens caso esteja vindo do cache
     function atualizar() {
-        query = Math.random()
+        query = Math.random();
+        mostrar_imagem();
     }
 
-    $.getJSON("str.json",
-        function (msg) {
-            if (1 != msg.id) {
-                var n = $("#str");
-                n.text(msg.descricao + " Última Atualização: " + msg.data)
-            }
-        }
-    );
 });
