@@ -31,32 +31,32 @@
 
 				<style>
 								:root {
-												--btn-toolbar-height: 8%;
+												--toolbar-height: 5vh;
 								}
 
 								.btn-toolbar {
-												height: var(--btn-toolbar-height);
-												min-height: var(--btn-toolbar-height);
+												height: var(--toolbar-height);
+												min-height: var(--toolbar-height);
 								}
 
 								#mapid {
 												position: relative;
 												outline: none;
-												height: calc(100% - var(--btn-toolbar-height));
+												height: calc(100% - var(--toolbar-height));
 												width: 100% !important;
 								}
 
 								body * .scandate {
-												height: var(--btn-toolbar-height);
+												height: var(--toolbar-height);
 								}
 																								body * .scandate > img {
-																												margin-top: calc(var(--btn-toolbar-height) /2 - 4px)
+																												margin-top: calc(var(--toolbar-height) /2 - 4px)
 																								}
 
 								/* Adjust the image for smaller screens */
 								@media (max-height: 700px) {
 																								:root {
-																												--btn-toolbar-height: 10%;
+																												--toolbar-height: 10vh;
 																								}
 								}
 				</style>
