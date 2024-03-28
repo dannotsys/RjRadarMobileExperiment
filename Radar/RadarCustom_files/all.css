@@ -16,6 +16,10 @@ body {
   clip-path: circle(42% at 50% 50%);
 }
 
+.leaflet-interactive {
+    stroke: #0b5ed7;
+}
+
 .floating-img {
     position: absolute;
     bottom: 10px; /* Distance from the bottom of the viewport */

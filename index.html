@@ -48,10 +48,11 @@
 
 								body * .scandate {
 												height: var(--toolbar-height);
+												max-width: 1110px;
 								}
 												body * .scandate > img {
-																margin-top: calc((var(--toolbar-height) /2) - (var(--toolbar-height)/8));
-																max-width: 1113px;
+																margin-top: calc((var(--toolbar-height)/2)-(var(--toolbar-height)/7));
+																max-width: calc(100% - (100% - 1110px));
 												}
 								/* Adjust the image for smaller screens */
 								@media (max-height: 720px) {
