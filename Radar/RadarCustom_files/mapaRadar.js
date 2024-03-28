@@ -41,6 +41,10 @@ $(document).ready(function () {
     var query = 0;
     var imageTime = $("#image_timestamp");
 
+    imageTime.on("load", function () {
+        const url = imageTime.attr('src');
+        carregar_imagem(url);
+    })
 
     $('#play_pause').click(function () {
         play_pause();
@@ -105,7 +109,8 @@ $(document).ready(function () {
         var url = baseUrl + (
             String('000' + imagem_atual).slice(-3)
         ) + '.png?query=' + query;
-        carregar_imagem(url);
+
+        imageTime.attr("src", url);
     }
 
     function carregar_imagem(url) {
@@ -113,8 +118,6 @@ $(document).ready(function () {
             radar.remove();
         }
         radar = L.imageOverlay(url, bounds).addTo(mymap);
-
-        imageTime.attr("src", url);
     }
 
     // função para atualizar as imagens caso esteja vindo do cache
