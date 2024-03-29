@@ -13,11 +13,7 @@ body {
 }
 
 .leaflet-image-layer.leaflet-zoom-animated {
-  clip-path: circle(42% at 50% 50%);
-}
-
-.leaflet-pane.leaflet-overlay-pane > svg > g > path {
-    
+    clip-path: circle(42% at 50% 50%);
 }
 
 .leaflet-interactive {
@@ -25,11 +21,16 @@ body {
 }
 
 @media (prefers-color-scheme: dark) {
+
+    .leaflet-container {
+        background-color: black !important;
+    }
+
     .leaflet-layer,
     .leaflet-control-zoom-in,
     .leaflet-control-zoom-out,
     .leaflet-control-attribution {
-        filter: invert(100%) hue-rotate(220deg) grayscale(56%) opacity(96%) contrast(120%);
+        filter: invert(100%) hue-rotate(220deg) grayscale(56%) opacity(80%) contrast(120%);
     }
 }
 
