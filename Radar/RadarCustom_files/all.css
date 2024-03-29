@@ -23,17 +23,19 @@ body {
 @media (prefers-color-scheme: dark) {
 
     .leaflet-container {
-        background-color: black !important;
+        background-color: #0a58ca55 !important;
+    }
+
+    .leaflet-layer {
+        filter: invert(100%) hue-rotate(220deg) grayscale(35%) opacity(60%) contrast(120%);
     }
 
     .leaflet-layer,
     .leaflet-control-zoom-in,
     .leaflet-control-zoom-out,
     .leaflet-control-attribution {
-        filter: invert(100%) hue-rotate(220deg) grayscale(56%) opacity(80%) contrast(120%);
     }
 }
-
 
 .floating-img {
     position: absolute;
