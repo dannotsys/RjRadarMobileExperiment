@@ -29,7 +29,7 @@ body {
     .leaflet-control-zoom-in,
     .leaflet-control-zoom-out,
     .leaflet-control-attribution {
-        filter: invert(100%) hue-rotate(220deg) grayscale(70%) opacity(93%) contrast(120%);
+        filter: invert(100%) hue-rotate(220deg) grayscale(70%) opacity(96%) contrast(120%);
     }
 }
 
