@@ -23,11 +23,11 @@ body {
 @media (prefers-color-scheme: dark) {
 
     .leaflet-container {
-        background-color: #0a58ca82 !important;
+        background-color: #0b4cacff !important;
     }
 
     .leaflet-layer {
-        filter: invert(100%) hue-rotate(220deg) grayscale(35%) opacity(70%) contrast(140%);
+        filter: invert(100%) hue-rotate(220deg) grayscale(25%) opacity(70%) contrast(140%);
     }
 
     .leaflet-control-attribution {
