@@ -16,15 +16,20 @@ body {
   clip-path: circle(42% at 50% 50%);
 }
 
+.leaflet-pane.leaflet-overlay-pane > svg > g > path {
+    
+}
+
 .leaflet-interactive {
     stroke: #0b5ed7;
 }
+
 @media (prefers-color-scheme: dark) {
     .leaflet-layer,
     .leaflet-control-zoom-in,
     .leaflet-control-zoom-out,
     .leaflet-control-attribution {
-        filter: invert(100%) hue-rotate(220deg) grayscale(70%) contrast(120%);
+        filter: invert(100%) hue-rotate(220deg) grayscale(70%) opacity(90%) contrast(120%);
     }
 }
 
