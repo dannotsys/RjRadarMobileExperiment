@@ -19,12 +19,15 @@ body {
 .leaflet-interactive {
     stroke: #0b5ed7;
 }
-.leaflet-layer,
-.leaflet-control-zoom-in,
-.leaflet-control-zoom-out,
-.leaflet-control-attribution {
-    filter: invert(100%) hue-rotate(220deg) grayscale(70%) contrast(120%);
+@media (prefers-color-scheme: dark) {
+    .leaflet-layer,
+    .leaflet-control-zoom-in,
+    .leaflet-control-zoom-out,
+    .leaflet-control-attribution {
+        filter: invert(100%) hue-rotate(220deg) grayscale(70%) contrast(120%);
+    }
 }
+
 
 .floating-img {
     position: absolute;
