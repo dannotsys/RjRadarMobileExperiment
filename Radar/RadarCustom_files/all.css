@@ -23,7 +23,7 @@ body {
 .leaflet-control-zoom-in,
 .leaflet-control-zoom-out,
 .leaflet-control-attribution {
-  filter: grayscale(50%) invert(92%) contrast(95%) brightness(120%) hue-rotate(220deg);
+  filter: invert(92%) grayscale(70%) contrast(105%) brightness(120%) hue-rotate(200deg);
 }
 
 .floating-img {
