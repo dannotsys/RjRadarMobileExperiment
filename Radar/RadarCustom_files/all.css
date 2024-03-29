@@ -27,7 +27,7 @@ body {
     }
 
     .leaflet-layer {
-        filter: invert(100%) hue-rotate(220deg) grayscale(25%) opacity(70%) contrast(140%);
+        filter: invert(100%) hue-rotate(220deg) grayscale(25%) opacity(78%) contrast(140%);
     }
 
     .leaflet-control-attribution {
