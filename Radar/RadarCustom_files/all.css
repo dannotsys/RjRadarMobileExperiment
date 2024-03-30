@@ -22,12 +22,8 @@ body {
 
 @media (prefers-color-scheme: dark) {
 
-    .leaflet-container {
-        background-color: #333 !important;
-    }
-
     .leaflet-layer {
-        filter: invert(100%) hue-rotate(220deg) grayscale(40%) opacity(100%) contrast(120%);
+        filter: invert(100%) hue-rotate(220deg) grayscale(40%) brightness(115%) contrast(105%);
     }
 
     .leaflet-control-attribution {
