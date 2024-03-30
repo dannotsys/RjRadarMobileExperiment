@@ -40,7 +40,7 @@ body {
     position: absolute;
     bottom: 10px; /* Distance from the bottom of the viewport */
     left: 10px; /* Distance from the left side of the viewport */
-    width: 70px; /* Set the width of the image */
+    width: 62px; /* Set the width of the image */
     height: auto; /* Maintain aspect ratio */
     z-index: 1000; /* Ensure it's above most other elements */
 }
