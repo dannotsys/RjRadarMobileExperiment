@@ -1,88 +1,44 @@
 <!-- saved from url=(0057)http://alertario.rio.rj.gov.br/upload/Mapa/mapaRadar.html -->
-<html lang="en">
+<html lang="pt-br">
 
 <head>
 				<title>Radar de Chuvas RJ</title>
+
 				<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 				<meta name="viewport" content="width=device-width, initial-scale=1">
+
 				<base href="./Radar/">
 
 				<link rel="stylesheet" href="RadarCustom_files/leaflet.css">
 
-				<script src="RadarCustom_files/leaflet.js"></script>
+				<link rel="stylesheet" href="RadarCustom_files/font-awesome.css">
 
-				<link rel="stylesheet" href="RadarCustom_files/all.css">
-
-				<!-- Latest compiled and minified CSS -->
 				<link rel="stylesheet" href="RadarCustom_files/bootstrap.min.css">
 
-				<!-- jQuery library -->
+				<link rel="stylesheet" href="RadarCustom_files/mapaRadar.css">
+
+				<script src="RadarCustom_files/leaflet.js"></script>
+
 				<script src="RadarCustom_files/jquery.min.js"></script>
 
-				<!-- Popper JS -->
 				<script src="RadarCustom_files/popper.min.js"></script>
 
-				<!-- Latest compiled JavaScript -->
 				<script src="RadarCustom_files/bootstrap.min.js"></script>
 
+				<script src="RadarCustom_files/generic.js"></script>
+
+				<script type="text/javascript">
+								if (getQueryVariable("theme") == "dark") {
+												$('head').append('<link rel="stylesheet" type="text/css" href="RadarCustom_files/dark.css">');
+								}
+				</script>
 
 				<script src="RadarCustom_files/mapaRadar.js"></script>
-				
-
-				<style>
-								:root {
-												--toolbar-height: 5vh;
-								}
-
-								.btn-toolbar {
-												height: var(--toolbar-height);
-												min-height: var(--toolbar-height);
-								}
-
-								.leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
-												border: 2px solid #0d6efd !important;
-								}
-
-								.leaflet-control-zoom-in,
-								.leaflet-control-zoom-out {
-												background-color: #0d6efd !important;
-												border-bottom-color: #0d6efd !important;
-												color: white !important;
-								}
-
-								#mapid {
-												position: relative;
-												outline: none;
-												height: calc(100% - var(--toolbar-height));
-												width: 100% !important;
-								}
-
-								body * .scandate {
-												height: var(--toolbar-height);
-												max-width: 1110px;
-								}
-												body * .scandate > img {
-																margin-top: calc((var(--toolbar-height) / 2) - (var(--toolbar-height) / 7));
-																max-width: calc(100% - (100% - 1110px));
-												}
-								/* Adjust the image for smaller screens */
-								@media (max-height: 720px) {
-												:root {
-																--toolbar-height: 7vh;
-												}
-								}
-
-								@media (max-height: 480px) {
-												:root {
-																--toolbar-height: 10vh;
-												}
-								}
-
-				</style>
 
 </head>
 
-<body style="background: black">
+<body>
 
 				<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" >
 								<div class="btn-group">
@@ -99,8 +55,8 @@
 																			class="fas fa-step-forward"></i>
 												</button>
 												<button id="reload" type="button" class="btn btn-primary"><i id="reload_icon" class="fas fa-sync-alt"></i></button>
-												<div class="scandate" style="background: black;max-width:100%;overflow:hidden;">
-																<img title="Data e horário" id="image_timestamp" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" style="object-fit: cover; margin-left: -2em; width: calc(50vw + 560px); clip-path: inset(0 69.5% 92% 5%); "/>
+												<div class="scandate">
+																<img title="Data e horário" id="image_timestamp" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/>
 												</div>
 								</div>
 				</div>

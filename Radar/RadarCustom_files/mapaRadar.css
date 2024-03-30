@@ -1,5 +1,79 @@
+:root {
+				--toolbar-height: 5vh;
+}
 
+.btn-toolbar {
+				height: var(--toolbar-height);
+				min-height: var(--toolbar-height);
+}
 
-.leaflet-overlay-pane {
-	transform: translate3d(-858px, -240px, 0px);
+.leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
+				border: 2px solid #0d6efd !important;
+}
+
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+				background-color: #0d6efd !important;
+				border-bottom-color: #0d6efd !important;
+				color: white !important;
+}
+
+#mapid {
+				position: relative;
+				outline: none;
+				height: calc(100% - var(--toolbar-height));
+				width: 100% !important;
+}
+
+.scandate {
+				height: var(--toolbar-height);
+				max-width: 1110px;
+				overflow: hidden;
+}
+				.scandate > img {
+								clip-path: inset(0 69.5% 92% 5%);
+								margin-left: -2em;
+								margin-top: calc((var(--toolbar-height) / 2) - (var(--toolbar-height) / 7));
+								max-width: calc(100% - (100% - 1110px));
+								object-fit: cover;
+								width: calc(50vw + 560px);
+				}
+
+/* Adjust for screens */
+@media (max-height: 720px) {
+				:root {
+								--toolbar-height: 7vh;
+				}
+}
+
+@media (max-height: 480px) {
+				:root {
+								--toolbar-height: 10vh;
+				}
+}
+
+body {
+				height: 100%;
+				background: black;
+}
+
+.btn {
+				border-radius: 0 !important;
+}
+
+.floating-img {
+				position: absolute;
+				bottom: 10px; /* Distance from the bottom of the viewport */
+				left: 10px; /* Distance from the left side of the viewport */
+				width: 64px; /* Set the width of the image */
+				height: auto; /* Maintain aspect ratio */
+				z-index: 1000; /* Ensure it's above most other elements */
+}
+
+.leaflet-image-layer.leaflet-zoom-animated {
+				clip-path: circle(42% at 50% 50%);
+}
+
+.leaflet-interactive {
+				stroke: #0b5ed7;
 }

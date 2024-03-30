@@ -15,7 +15,6 @@ $(document).ready(function () {
     //Plota o controle de zoom canto inferior direito
     L.control.zoom().setPosition('bottomright').addTo(mymap)
 
-
     // Bounds das imagens do radar
     var bounds = L.latLngBounds(
         L.latLng(-24.431567, -45.336972),
@@ -32,19 +31,13 @@ $(document).ready(function () {
             fill: false,
         }).addTo(mymap);
 
-
     var intervalo_radar = null;
     var imagem_atual = 1;
     var play = true;
     var radar = null;
     var baseUrl = 'https://bpyu1frhri.execute-api.us-east-1.amazonaws.com/maparadar/radar';
-    var query = 0;
+    var query = Math.random();
     var imageTime = $("#image_timestamp");
-
-    imageTime.on("load", function () {
-        const url = imageTime.attr('src');
-        carregar_imagem(url);
-    })
 
     $('#play_pause').click(function () {
         play_pause();
@@ -61,7 +54,6 @@ $(document).ready(function () {
     $('#reload').click(function () {
         atualizar();
     })
-
 
     // Funcoes de controle das imagens
     function ligar_intervalo_radar() {
@@ -110,14 +102,24 @@ $(document).ready(function () {
             String('000' + imagem_atual).slice(-3)
         ) + '.png?query=' + query;
 
-        imageTime.attr("src", url);
+        var img = new Image();
+        img.onload = function () {
+            carregar_imagem(url, true);
+        };
+        img.onerror == function () {
+            carregar_imagem(url, false);
+        };
+        img.src = url;
     }
 
-    function carregar_imagem(url) {
+    function carregar_imagem(url, show) {
         if (radar != null) {
             radar.remove();
         }
         radar = L.imageOverlay(url, bounds).addTo(mymap);
+
+        if (show)
+            imageTime.attr("src", url);
     }
 
     // função para atualizar as imagens caso esteja vindo do cache

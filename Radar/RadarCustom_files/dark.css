@@ -1,0 +1,16 @@
+
+@media (prefers-color-scheme: dark) {
+
+				.leaflet-container {
+								background-color: #000 !important;
+				}
+
+				.leaflet-layer {
+								filter: invert(100%) hue-rotate(220deg) grayscale(50%) brightness(115%) contrast(110%);
+				}
+
+				.leaflet-control-attribution {
+								background-color: #202e44ff !important;
+								color: white !important;
+				}
+}
