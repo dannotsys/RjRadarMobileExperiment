@@ -19,7 +19,7 @@ body {
 .leaflet-interactive {
     stroke: #0b5ed7;
 }
-
+/*
 @media (prefers-color-scheme: dark) {
 
     .leaflet-container {
@@ -35,7 +35,7 @@ body {
         color: white !important;
     }
 }
-
+*/
 .floating-img {
     position: absolute;
     bottom: 10px; /* Distance from the bottom of the viewport */
