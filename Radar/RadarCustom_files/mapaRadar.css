@@ -23,7 +23,7 @@
 				outline: none;
 				height: calc(100% - var(--toolbar-height));
 				width: 100% !important;
-	                        transform: scale(0.8);
+	                        transform: scale(0.5);
 }
 
 .scandate {
