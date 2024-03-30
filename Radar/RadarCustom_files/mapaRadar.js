@@ -10,7 +10,7 @@ $(document).ready(function () {
             zoomControl: false,
             layers: [layerOSM,],
         }
-    ).setView([-22.9499, -43.4199], 8);
+    ).setView([-22.7499, -43.2399], 9);
 
     //Plota o controle de zoom canto inferior direito
     L.control.zoom().setPosition('bottomright').addTo(mymap)
@@ -25,7 +25,7 @@ $(document).ready(function () {
     var circulo = L.circle([-22.960849, -43.2646667],
         {
             radius: 138900,
-            weight: 2,
+            weight: 3,
             dashArray: '10 10',
             color: '#00F',
             fill: false,
