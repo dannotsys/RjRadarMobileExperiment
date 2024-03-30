@@ -6,7 +6,7 @@
 				}
 
 				.leaflet-layer {
-								filter: invert(100%) hue-rotate(200deg) brightness(140%) contrast(108%) saturate(0.8);
+								filter: invert(100%) hue-rotate(200deg) brightness(140%) contrast(108%) saturate(0.6);
 				}
 
 				.leaflet-control-attribution {
