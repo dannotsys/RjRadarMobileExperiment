@@ -23,7 +23,7 @@ body {
 @media (prefers-color-scheme: dark) {
 
     .leaflet-layer {
-        filter: invert(100%) hue-rotate(220deg) grayscale(40%) brightness(115%) contrast(105%);
+        filter: invert(100%) hue-rotate(220deg) grayscale(40%) brightness(115%) contrast(110%);
     }
 
     .leaflet-control-attribution {
