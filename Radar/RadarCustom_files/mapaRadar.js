@@ -5,10 +5,10 @@ $(document).ready(function () {
         maxZoom: 18,
     });
 
-    var defaultZoom = 9;
+    var defaultZoom = 7;
 
-    if (window.matchMedia("(max-height:720px)").matches) {
-        defaultZoom = 7;
+    if (window.matchMedia("(min-width:1024px)").matches) {
+        defaultZoom = 9;
     }
 
     var mymap = L.map('mapid',
