@@ -5,12 +5,18 @@ $(document).ready(function () {
         maxZoom: 18,
     });
 
+    var defaultZoom = 9;
+
+    if (window.matchMedia("(max-height:720px)").matches) {
+        defaultZoom = 7;
+    }
+
     var mymap = L.map('mapid',
         {
             zoomControl: false,
             layers: [layerOSM,],
         }
-    ).setView([-22.7499, -43.2399], 7);
+    ).setView([-22.8499, -43.2399], defaultZoom);
 
     //Plota o controle de zoom canto inferior direito
     L.control.zoom().setPosition('bottomright').addTo(mymap)
