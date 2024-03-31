@@ -10,7 +10,7 @@ $(document).ready(function () {
             zoomControl: false,
             layers: [layerOSM,],
         }
-    ).setView([-22.7499, -43.2399], 8);
+    ).setView([-22.7499, -43.2399], 7);
 
     //Plota o controle de zoom canto inferior direito
     L.control.zoom().setPosition('bottomright').addTo(mymap)
