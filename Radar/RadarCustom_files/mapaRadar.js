@@ -5,7 +5,7 @@ $(document).ready(function () {
         maxZoom: 18,
     });
 
-    var defaultZoom = 7;
+    let defaultZoom = 7;
 
     if (window.matchMedia("(min-width:1024px)").matches) {
         defaultZoom = 9;
@@ -28,7 +28,7 @@ $(document).ready(function () {
     )
 
     //Desenha o circulo do alcançe do radar meteorológico
-    var circulo = L.circle([-22.960849, -43.2646667],
+    L.circle([-22.960849, -43.2646667],
         {
             radius: 138900,
             weight: 3,
@@ -39,6 +39,7 @@ $(document).ready(function () {
 
     var intervalo_radar = null;
     var imagem_atual = 1;
+    var ultima_imagem_carregada = 0;
     var play = true;
     var radar = null;
     var baseUrl = 'https://bpyu1frhri.execute-api.us-east-1.amazonaws.com/maparadar/radar';
@@ -91,6 +92,7 @@ $(document).ready(function () {
         } else {
             imagem_atual = 1;
         }
+        ultima_imagem_carregada = 0;
         mostrar_imagem();
     }
 
@@ -100,33 +102,39 @@ $(document).ready(function () {
         } else {
             imagem_atual = 20;
         }
+        ultima_imagem_carregada = 0;
         mostrar_imagem();
     }
 
-    function mostrar_imagem() {
-        var url = baseUrl + (
-            String('000' + imagem_atual).slice(-3)
+    function get_url(imagem)
+    {
+        let url = baseUrl + (
+            String('000' + imagem).slice(-3)
         ) + '.png?query=' + query;
 
-        var img = new Image();
+        return url;
+    }
+
+    function mostrar_imagem() {
+        let img = new Image();
         img.onload = function () {
-            carregar_imagem(url, true);
+            carregar_imagem();
         };
-        img.onerror == function () {
-            carregar_imagem(url, false);
-        };
-        img.src = url;
+        img.src = get_url(imagem_atual);
     }
 
-    function carregar_imagem(url, show) {
-        if (radar != null) {
-            radar.remove();
-        }
-        radar = L.imageOverlay(url, bounds).addTo(mymap);
+				function carregar_imagem() {
+								if (ultima_imagem_carregada < imagem_atual) {
+												ultima_imagem_carregada = imagem_atual;
 
-        if (show)
-            imageTime.attr("src", url);
-    }
+												if (radar != null) {
+																radar.remove();
+												}
+												let url = get_url(ultima_imagem_carregada);
+												imageTime.attr("src", url);
+												radar = L.imageOverlay(url, bounds).addTo(mymap);
+								}
+				}
 
     // função para atualizar as imagens caso esteja vindo do cache
     function atualizar() {
