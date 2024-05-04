@@ -44,7 +44,8 @@ $(document).ready(function () {
     var radar = null;
     var baseUrl = 'https://bpyu1frhri.execute-api.us-east-1.amazonaws.com/maparadar/radar';
     var query = Math.random();
-    var imageTime = $("#image_timestamp");
+    var imageTime = $('#image_timestamp');
+    var imageLoading = $('#image_loading');
 
     $('#play_pause').click(function () {
         play_pause();
@@ -120,7 +121,9 @@ $(document).ready(function () {
         img.onload = function () {
             carregar_imagem();
         };
-        img.src = get_url(imagem_atual);
+        let url = get_url(imagem_atual);
+        imageLoading.show();
+        img.src = url;
     }
 
 				function carregar_imagem() {
@@ -129,7 +132,8 @@ $(document).ready(function () {
 
 												if (radar != null) {
 																radar.remove();
-												}
+            }
+            imageLoading.hide();
 												let url = get_url(ultima_imagem_carregada);
 												imageTime.attr("src", url);
 												radar = L.imageOverlay(url, bounds).addTo(mymap);
