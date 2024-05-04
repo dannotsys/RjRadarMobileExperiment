@@ -1,5 +1,6 @@
 :root {
 				--toolbar-height: 5vh;
+				--loadingpanel-width: calc( 50vw - ( ( 85% - 50vw ) * 3.5 ) );
 }
 
 .btn-toolbar {
@@ -35,7 +36,10 @@ img.leaflet-tile {
 				max-width: 1110px;
 				overflow: hidden;
 }
-				.scandate > .loading {
+				.scandate > .loadingpainel {
+								max-width: var(--loadingpanel-width);
+				}
+				.scandate > .loadingpainel > .loading {
 								display: block;
 								padding: 10px;
 								max-height: 100%;
