@@ -1,6 +1,6 @@
 :root {
 				--toolbar-height: 5vh;
-				--loadingpanel-width: calc( 50vw - ( ( 85% - 50vw ) * 3.5 ) );
+				--loadingpanel-width: calc( 50vw - ( ( 85% - 50vw ) * 3.7 ) );
 }
 
 .btn-toolbar {
