@@ -136,19 +136,19 @@ $(document).ready(function () {
 
 				function carregar_imagem() {
 								if (ultima_imagem_carregada < imagem_atual) {
-												ultima_imagem_carregada = imagem_atual;
-
 												if (radar != null) {
 																radar.remove();
             }
-            if (imageLoading.is(":visible")) {
-                imageLoading.hide();
-            }
             
-												let url = get_url(ultima_imagem_carregada);
+            let url = get_url(imagem_atual);
 												imageTime.attr("src", url);
-												radar = L.imageOverlay(url, bounds).addTo(mymap);
-								}
+            radar = L.imageOverlay(url, bounds).addTo(mymap);
+
+            ultima_imagem_carregada = imagem_atual;
+        }
+        if (imageLoading.is(":visible")) {
+            imageLoading.hide();
+        }
 				}
 
     // função para atualizar as imagens caso esteja vindo do cache
