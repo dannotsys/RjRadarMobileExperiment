@@ -123,12 +123,14 @@ $(document).ready(function () {
         };
         let url = get_url(imagem_atual);
 
-        imageLoading.removeClass('easeload');
-        imageLoading.css('opacity', '0');
-        imageLoading.show();
-        imageLoading.addClass('easeload');
-        imageLoading.css('opacity', '1');
-        
+        if (imageLoading.is(":hidden")) { 
+            imageLoading.removeClass('easeload');
+            imageLoading.css('opacity', '0');
+            imageLoading.show();
+            imageLoading.addClass('easeload');
+            imageLoading.css('opacity', '1');
+        }
+
         img.src = url;
     }
 
@@ -139,8 +141,9 @@ $(document).ready(function () {
 												if (radar != null) {
 																radar.remove();
             }
-            imageLoading.hide();
-            
+            if (imageLoading.is(":visible")) {
+                imageLoading.hide();
+            }
             
 												let url = get_url(ultima_imagem_carregada);
 												imageTime.attr("src", url);
