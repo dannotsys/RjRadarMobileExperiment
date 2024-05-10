@@ -57,11 +57,12 @@ $(document).ready(function () {
     apisources.val(selectedApiSource);
 
     apisources.click(function () {
-        imagem_atual = 1;
+        
         let value = apisources.val();
-
+        if (value !== undefined)
+	{	
         localStorage.setItem("selectedApiSource", value);
-
+        imagem_atual = 1;
         if (value == "1") {
             baseUrl = 'https://bpyu1frhri.execute-api.us-east-1.amazonaws.com/maparadar/radar';
             immagem_maxima = 20;
@@ -70,6 +71,7 @@ $(document).ready(function () {
             baseUrl = 'https://imagens.climatempo.com.br/georio/radar/radar';
             immagem_maxima = 10;
         }
+	}
     })
 
     $('#play_pause').click(function () {
