@@ -56,7 +56,7 @@ $(document).ready(function () {
     var apisources = $('#apisources');
     apisources.val(selectedApiSource).change();
 
-    apisources.change(function () {
+    apisources.on('change', function () {
         
         let value = apisources.val();
         if (value !== undefined)
