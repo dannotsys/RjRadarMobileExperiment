@@ -48,12 +48,13 @@ $(document).ready(function () {
     
     var imageTimeDiv = $('#scandatediv');
     var imageLoading = $('#image_loading');
-
-    var apisources = $('#apisources');
+    
     let selectedApiSource = localStorage.getItem("selectedApiSource");
-    if (selectedApiSource !== undefined) {
-        apisources.val(selectedApiSource);
+    if (selectedApiSource == undefined) {
+        selectedApiSource = "1";
     }
+    var apisources = $('#apisources');
+    apisources.val(selectedApiSource);
 
     apisources.click(function () {
         imagem_atual = 1;
