@@ -1,6 +1,6 @@
 :root {
 				--toolbar-height: 5vh;
-				--difference: calc(var(--toolbar-height) * 19);
+				--difference: calc(var(--toolbar-height) * 18);
 				--loadingpanel-width: calc((40vw + var(--difference)) / 4.5 );
 }
 
@@ -34,10 +34,10 @@ img.leaflet-tile {
 
 .easeload {
 				opacity: 0;
-				-webkit-transition: all 0.7s ease;
-				-moz-transition: all 0.7s ease;
-				-ms-transition: all 0.7s ease;
-				-o-transition: all 0.7s ease;
+				-webkit-transition: all 0.5s ease;
+				-moz-transition: all 0.5s ease;
+				-ms-transition: all 0.5s ease;
+				-o-transition: all 0.5s ease;
 }
 
 .scandate {

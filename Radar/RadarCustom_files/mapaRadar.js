@@ -44,7 +44,8 @@ $(document).ready(function () {
     var radar = null;
     var baseUrl = 'https://bpyu1frhri.execute-api.us-east-1.amazonaws.com/maparadar/radar';
     var query = Math.random();
-    var imageTime = $('#image_timestamp');
+    
+    var imageTimeDiv = $('#scandatediv');
     var imageLoading = $('#image_loading');
 
     $('#play_pause').click(function () {
@@ -118,37 +119,61 @@ $(document).ready(function () {
 
     function mostrar_imagem() {
         let img = new Image();
+        
+        img.classList = 'timestamp';
+        img.title = 'Data e horário';
+
+        const hanging = setTimeout(isHanging, 250);
+
         img.onload = function () {
-            carregar_imagem();
+            clearTimeout(hanging);
+            carregar_imagem(img);
         };
         let url = get_url(imagem_atual);
 
-        if (imageLoading.is(":hidden")) { 
+        img.src = url;
+    }
+
+    function isHanging() {
+        if (imageLoading.is(":hidden")) {
             imageLoading.removeClass('easeload');
             imageLoading.css('opacity', '0');
             imageLoading.show();
             imageLoading.addClass('easeload');
             imageLoading.css('opacity', '1');
         }
-
-        img.src = url;
     }
 
-				function carregar_imagem() {
-								if (ultima_imagem_carregada < imagem_atual) {
-												if (radar != null) {
-																radar.remove();
+				function carregar_imagem(img) {
+        if (ultima_imagem_carregada < imagem_atual) {
+            if (radar != null) {
+                radar.remove();
             }
-            
+
             let url = get_url(imagem_atual);
-												imageTime.attr("src", url);
+
+            let imageTime = document.getElementById('image_timestamp');
+
+            imageTimeDiv.append(img);
+
+            img.id = 'image_timestamp';
+
             radar = L.imageOverlay(url, bounds).addTo(mymap);
 
             ultima_imagem_carregada = imagem_atual;
+
+            if (imageLoading.is(":visible")) {
+                imageLoading.hide();
+            }
+
+            imageTime.remove();
         }
-        if (imageLoading.is(":visible")) {
-            imageLoading.hide();
+        else {
+            if (imageLoading.is(":visible")) {
+                imageLoading.hide();
+            }
         }
+
 				}
 
     // função para atualizar as imagens caso esteja vindo do cache
