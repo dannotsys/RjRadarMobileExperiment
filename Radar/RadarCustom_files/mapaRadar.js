@@ -48,9 +48,10 @@ $(document).ready(function () {
     
     var imageTimeDiv = $('#scandatediv');
     var imageLoading = $('#image_loading');
+    var imageLoadingPanel = $('#loadingdiv');
     var apisources = $('#apisources');
     
-    let selectedApiSource = localStorage.getItem("selectedApiSource");
+    var selectedApiSource = localStorage.getItem("selectedApiSource");
     if (selectedApiSource == undefined || selectedApiSource == null) {
         selectedApiSource = "1";
     }
@@ -61,7 +62,8 @@ $(document).ready(function () {
     apisources.on('change', function () {
         let source = this.value;
         mudar_origem_dados(source);
-        //atualizar();
+        if (play)
+            atualizar();
     })
 
     $('#play_pause').click(function () {
@@ -84,6 +86,8 @@ $(document).ready(function () {
     function mudar_origem_dados(source) {
         
         if (source !== undefined) {
+            selectedApiSource = source;
+
             localStorage.setItem("selectedApiSource", source);
 
             if (source == "1") {
@@ -153,8 +157,9 @@ $(document).ready(function () {
 
     function mostrar_imagem() {
         let img = new Image();
-
-        img.setAttribute('crossorigin', 'anonymous');
+        if (selectedApiSource == "2") {
+            img.setAttribute('crossorigin', 'anonymous');
+        }
         img.classList = 'timestamp';
         img.title = 'Data e horário';
 
@@ -170,17 +175,24 @@ $(document).ready(function () {
     }
 
     function isHanging() {
-        if (imageLoading.is(":hidden")) {
+        if (imageLoadingPanel.is(":hidden")) {
             imageLoading.removeClass('easeload');
             imageLoading.css('opacity', '0');
             imageLoading.show();
             imageLoading.addClass('easeload');
             imageLoading.css('opacity', '1');
+            imageLoadingPanel.show();
         }
     }
 
 				function carregar_imagem(img) {
         if (ultima_imagem_carregada < imagem_atual) {
+
+            if (imageLoading.is(":visible")) {
+                imageLoading.hide();
+                imageLoadingPanel.hide();
+            }
+
             if (radar != null) {
                 radar.remove();
             }
@@ -197,15 +209,12 @@ $(document).ready(function () {
 
             ultima_imagem_carregada = imagem_atual;
 
-            if (imageLoading.is(":visible")) {
-                imageLoading.hide();
-            }
-
             imageTime.remove();
         }
         else {
             if (imageLoading.is(":visible")) {
                 imageLoading.hide();
+                imageLoadingPanel.hide();
             }
         }
 

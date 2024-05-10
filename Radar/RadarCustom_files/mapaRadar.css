@@ -1,6 +1,6 @@
 :root {
 				--toolbar-height: 5vh;
-				--difference: calc(var(--toolbar-height) * 18);
+				--difference: calc(var(--toolbar-height) * 20);
 				--loadingpanel-width: calc((40vw + var(--difference)) / 4.5 );
 }
 
@@ -41,29 +41,40 @@ img.leaflet-tile {
 }
 
 .scandate {
+				display: grid;
 				height: var(--toolbar-height);
 				max-width: 100%;
 				overflow: hidden;
 }
 				.scandate > .loadingpainel {
+								background-color: black;
+								grid-area: 1 / 1;
 								width: var(--loadingpanel-width);
+								height: var(--toolbar-height);
+								max-width: 100%;
+								z-index: 10000;
+				}
+								.scandate > .loadingpainel > .loading {
+												display: block;
+												padding: 10px;
+												max-height: 100%;
+												height: 100%;
+												margin: auto;
+								}
+				.scandate > .timepainel {
+								grid-area: 1 / 1;
+								width: 100%;
 								max-width: 100%;
 				}
-				.scandate > .loadingpainel > .loading {
-								display: block;
-								padding: 10px;
-								max-height: 100%;
-								height: 100%;
-								margin: auto;
-				}
-				.scandate > .timestamp {
-								clip-path: inset(0 69.5% 92% 5%);
-								margin-left: -2em;
-								margin-top: calc((var(--toolbar-height) / 2) - (var(--toolbar-height) / 7));
-								max-width: calc(100% - (100% - 1110px));
-								object-fit: cover;
-								width: calc(50vw + 560px);
-				}
+								.scandate > .timepainel > .timestamp {
+												clip-path: inset(0 69.5% 92% 5%);
+												margin-left: -2em;
+												margin-top: calc((var(--toolbar-height) / 2) - (var(--toolbar-height) / 7));
+												max-height: 100%;
+												max-width: calc(100% - (100% - 1110px));
+												object-fit: cover;
+												width: calc(50vw + 560px);
+								}
 
 /* Adjust for screens */
 @media (max-height: 720px) {
