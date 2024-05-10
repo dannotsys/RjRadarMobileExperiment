@@ -153,7 +153,8 @@ $(document).ready(function () {
 
     function mostrar_imagem() {
         let img = new Image();
-        
+
+        img.setAttribute('crossorigin', 'anonymous');
         img.classList = 'timestamp';
         img.title = 'Data e horário';
 
