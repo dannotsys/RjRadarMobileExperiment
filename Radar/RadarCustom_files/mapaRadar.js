@@ -58,7 +58,7 @@ $(document).ready(function () {
 
     apisources.on('change', function () {
         
-        let value = apisources.val();
+        let value = this.value;
         if (value !== undefined)
 	{	
         localStorage.setItem("selectedApiSource", value);
