@@ -71,6 +71,7 @@ $(document).ready(function () {
             baseUrl = 'https://imagens.climatempo.com.br/georio/radar/radar';
             immagem_maxima = 10;
         }
+	atualizar();
 	}
     })
 
