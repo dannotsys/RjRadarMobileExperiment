@@ -39,6 +39,7 @@ $(document).ready(function () {
 
     var intervalo_radar = null;
     var imagem_atual = 1;
+    var immagem_maxima = 20;
     var ultima_imagem_carregada = 0;
     var play = true;
     var radar = null;
@@ -47,6 +48,28 @@ $(document).ready(function () {
     
     var imageTimeDiv = $('#scandatediv');
     var imageLoading = $('#image_loading');
+
+    var apisources = $('#apisources');
+    let selectedApiSource = localStorage.getItem("selectedApiSource");
+    if (selectedApiSource !== undefined) {
+        apisources.val(selectedApiSource);
+    }
+
+    apisources.click(function () {
+        imagem_atual = 1;
+        let value = apisources.val();
+
+        localStorage.setItem("selectedApiSource", value);
+
+        if (value == "1") {
+            baseUrl = 'https://bpyu1frhri.execute-api.us-east-1.amazonaws.com/maparadar/radar';
+            immagem_maxima = 20;
+        }
+        else {
+            baseUrl = 'https://imagens.climatempo.com.br/georio/radar/radar';
+            immagem_maxima = 10;
+        }
+    })
 
     $('#play_pause').click(function () {
         play_pause();
@@ -89,7 +112,7 @@ $(document).ready(function () {
     }
 
     function proxima_imagem() {
-        if (imagem_atual < 20) {
+        if (imagem_atual < immagem_maxima) {
             imagem_atual += 1;
         } else {
             imagem_atual = 1;
@@ -102,7 +125,7 @@ $(document).ready(function () {
         if (imagem_atual > 1) {
             imagem_atual -= 1;
         } else {
-            imagem_atual = 20;
+            imagem_atual = immagem_maxima;
         }
         ultima_imagem_carregada = 0;
         mostrar_imagem();

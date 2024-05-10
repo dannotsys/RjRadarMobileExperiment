@@ -96,6 +96,19 @@ body {
 				z-index: 1000; /* Ensure it's above most other elements */
 }
 
+.apisourcespainel {
+				position: absolute;
+				bottom: 26px; /* Distance from the bottom of the viewport */
+				width: 100%; /* Set the width of the image */
+				height: auto; /* Maintain aspect ratio */
+				z-index: 1000; /* Ensure it's above most other elements */
+}
+				.apisourcespainel > .form-select {
+								display: block;
+								margin: auto;
+								width: auto;
+				}
+
 .leaflet-image-layer.leaflet-zoom-animated {
 				clip-path: circle(42% at 50% 50%);
 }

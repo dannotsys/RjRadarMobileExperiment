@@ -13,4 +13,9 @@
 								background-color: #202e44ff !important;
 								color: white !important;
 				}
+
+				.form-select {
+								background-color: #222 !important;
+								color: white !important;
+				}
 }
