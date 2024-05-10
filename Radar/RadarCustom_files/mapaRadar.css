@@ -1,7 +1,7 @@
 :root {
 				--toolbar-height: 5vh;
-				--difference: calc(var(--toolbar-height) * 20);
-				--loadingpanel-width: calc((40vw + var(--difference)) / 4.5 );
+				--difference: calc(var(--toolbar-height) * 19);
+				--loadingpanel-width: calc((40vw + var(--difference)) / 4.4 );
 }
 
 .btn-toolbar {
