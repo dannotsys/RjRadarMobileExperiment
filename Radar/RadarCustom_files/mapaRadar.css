@@ -54,7 +54,7 @@ img.leaflet-tile {
 				}
 								.scandate > .loadingpainel > .loading {
 												object-fit: scale-down;
-												padding: 10px 2vw 10px 0vw;
+												padding: 10px 4vw 10px 20px;
 												height: var(--toolbar-height);
 												max-height: 100%;
 												width: var(--loadingpanel-width);
