@@ -18,4 +18,7 @@
 								background-color: #2228 !important;
 								color: white !important;
 				}
+								.form-select option:disabled {
+												color: #ccc !important;
+								}
 }

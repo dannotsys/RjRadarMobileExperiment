@@ -120,3 +120,6 @@ body {
 .form-select {
 				background-color: #fff8 !important;
 	}
+				.form-select option:disabled {
+								color: #999 !important;
+				}
