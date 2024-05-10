@@ -50,7 +50,7 @@ $(document).ready(function () {
     var imageLoading = $('#image_loading');
     
     let selectedApiSource = localStorage.getItem("selectedApiSource");
-    if (selectedApiSource == undefined) {
+    if (selectedApiSource == null) {
         selectedApiSource = "1";
     }
     var apisources = $('#apisources');
