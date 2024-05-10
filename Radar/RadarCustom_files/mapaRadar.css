@@ -1,7 +1,7 @@
 :root {
 				--toolbar-height: 5vh;
-				--difference: calc(var(--toolbar-height) * 19);
-				--loadingpanel-width: calc((40vw + var(--difference)) / 4.4 );
+				--difference: calc(var(--toolbar-height) * 20);
+				--loadingpanel-width: calc((40vw + var(--difference)) / 4.7 );
 }
 
 .btn-toolbar {
@@ -41,29 +41,27 @@ img.leaflet-tile {
 }
 
 .scandate {
-				display: grid;
+				position: relative;
 				height: var(--toolbar-height);
 				max-width: 100%;
+				width: 100%;
 				overflow: hidden;
 }
 				.scandate > .loadingpainel {
 								background-color: black;
-								grid-area: 1 / 1;
-								width: var(--loadingpanel-width);
-								height: var(--toolbar-height);
-								max-width: 100%;
 								z-index: 10000;
-								padding-right: 4vw;
+								max-width: 100%;
 				}
 								.scandate > .loadingpainel > .loading {
-												display: block;
-												padding: 10px 0px 10px 10px;
+												object-fit: scale-down;
+												padding: 10px 2vw 10px 0vw;
+												height: var(--toolbar-height);
 												max-height: 100%;
-												height: 100%;
+												width: var(--loadingpanel-width);
+												max-width: 100%;
 												margin: auto;
 								}
 				.scandate > .timepainel {
-								grid-area: 1 / 1;
 								width: 100%;
 								max-width: 100%;
 				}
