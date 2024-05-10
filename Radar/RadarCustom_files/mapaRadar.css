@@ -116,3 +116,7 @@ body {
 .leaflet-interactive {
 				stroke: #0b5ed7;
 }
+
+.form-select {
+				background-color: #fff8 !important;
+	}
