@@ -48,31 +48,20 @@ $(document).ready(function () {
     
     var imageTimeDiv = $('#scandatediv');
     var imageLoading = $('#image_loading');
+    var apisources = $('#apisources');
     
     let selectedApiSource = localStorage.getItem("selectedApiSource");
-    if (selectedApiSource == null) {
+    if (selectedApiSource == undefined || selectedApiSource == null) {
         selectedApiSource = "1";
     }
-    var apisources = $('#apisources');
-    apisources.val(selectedApiSource).change();
+    
+    mudar_origem_dados(selectedApiSource);
+    apisources.val(selectedApiSource);
 
     apisources.on('change', function () {
-        
-        let value = this.value;
-        if (value !== undefined)
-	{	
-        localStorage.setItem("selectedApiSource", value);
-        imagem_atual = 1;
-        if (value == "1") {
-            baseUrl = 'https://bpyu1frhri.execute-api.us-east-1.amazonaws.com/maparadar/radar';
-            immagem_maxima = 20;
-        }
-        else {
-            baseUrl = 'https://imagens.climatempo.com.br/georio/radar/radar';
-            immagem_maxima = 10;
-        }
-	atualizar();
-	}
+        let source = this.value;
+        mudar_origem_dados(source);
+        //atualizar();
     })
 
     $('#play_pause').click(function () {
@@ -92,6 +81,24 @@ $(document).ready(function () {
     })
 
     // Funcoes de controle das imagens
+    function mudar_origem_dados(source) {
+        
+        if (source !== undefined) {
+            localStorage.setItem("selectedApiSource", source);
+
+            if (source == "1") {
+                baseUrl = 'https://bpyu1frhri.execute-api.us-east-1.amazonaws.com/maparadar/radar';
+                immagem_maxima = 20;
+            }
+            else {
+                baseUrl = 'https://imagens.climatempo.com.br/georio/radar/radar';
+                immagem_maxima = 10;
+            }
+            ultima_imagem_carregada = 0;
+            imagem_atual = 1;
+        }
+    }
+
     function ligar_intervalo_radar() {
         mostrar_imagem();
         intervalo_radar = window.setInterval(function () {
@@ -150,7 +157,7 @@ $(document).ready(function () {
         img.classList = 'timestamp';
         img.title = 'Data e horário';
 
-        const hanging = setTimeout(isHanging, 250);
+        let hanging = setTimeout(isHanging, 250);
 
         img.onload = function () {
             clearTimeout(hanging);
