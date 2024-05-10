@@ -62,7 +62,7 @@
 												<button id="reload" type="button" class="btn btn-primary"><i id="reload_icon" class="fas fa-sync-alt"></i></button>
 												<div class="scandate">
 																<div class="loadingpainel" id="loadingdiv" style="display:none;">
-																				<img class="loading" src="RadarCustom_files/loading.gif" id="image_loading" style="display:none;"/>
+																				<img class="loading" src="RadarCustom_files/loading.gif" id="image_loading" style="display:none;" />
 																</div>
 																<div class="timepainel" id="scandatediv">
 																				<img class="timestamp" id="image_timestamp" title="Data e horário" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" />
@@ -116,13 +116,21 @@
 
 				<img title="Intensidade" src="RadarCustom_files/legend.png" alt="Legenda" class="floating-img">
 
-				<div class="apisourcespainel" id="apisourcediv">
-								<select class="form-select form-select-sm" name="apisources" id="apisources">
-												<option disabled selected value="">Data source</option>
-												<option value="1">C.R</option>
-												<option value="2">C.T.</option>
-								</select>
+				<div class="clearfix" style="max-height:0px">
+								<div class="outer-div">
+												<div class="inner-div">
+																<div class="apisourcespainel" id="apisourcediv">
+																				<select class="form-select form-select-sm" name="apisources" id="apisources">
+																								<option disabled selected value="">Data source</option>
+																								<option value="1">C.R</option>
+																								<option value="2">C.T.</option>
+																				</select>
+																</div>
+												</div>
+								</div>
 				</div>
+
+
 
 </body>
 

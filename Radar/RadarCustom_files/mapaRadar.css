@@ -75,6 +75,32 @@ img.leaflet-tile {
 												width: calc(50vw + 560px);
 								}
 
+.clearfix {
+				*zoom: 1;
+}
+				.clearfix:before,
+				.clearfix:after {
+								content: " ";
+								display: table;
+				}
+
+				.clearfix:after {
+								clear: both;
+				}
+
+.outer-div {
+				position: relative;
+				bottom: 58px; /* Distance from the bottom of the viewport */
+				float: right;
+				right: 50%;
+}
+
+.inner-div {
+				position: relative;
+				float: right;
+				right: -50%;
+}
+
 /* Adjust for screens */
 @media (max-height: 720px) {
 				:root {
@@ -111,8 +137,7 @@ body {
 }
 
 .apisourcespainel {
-				position: absolute;
-				bottom: 26px; /* Distance from the bottom of the viewport */
+				position: relative;
 				width: 100%; /* Set the width of the image */
 				height: auto; /* Maintain aspect ratio */
 				z-index: 1000; /* Ensure it's above most other elements */
