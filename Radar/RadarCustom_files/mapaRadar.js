@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    var layerOSM = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?', {
+    var layerOSM = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?', {
         attribution: '&copy; OpenStreetMap Contributors.',
         maxZoom: 18,
     });
