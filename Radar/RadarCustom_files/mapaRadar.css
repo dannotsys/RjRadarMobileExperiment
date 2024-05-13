@@ -90,7 +90,7 @@ img.leaflet-tile {
 
 .outer-div {
 				position: relative;
-				bottom: 58px; /* Distance from the bottom of the viewport */
+				bottom: 62px; /* Distance from the bottom of the viewport */
 				float: right;
 				right: 50%;
 }
