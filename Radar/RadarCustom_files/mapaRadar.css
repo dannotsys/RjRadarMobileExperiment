@@ -66,7 +66,7 @@ img.leaflet-tile {
 								max-width: 100%;
 				}
 								.scandate > .timepainel > .timestamp {
-												clip-path: inset(0 69.5% 92% 5%);
+												clip-path: inset(0 69.5% 97.7% 5%);
 												margin-left: -2em;
 												margin-top: calc((var(--toolbar-height) / 2) - (var(--toolbar-height) / 7));
 												max-height: 100%;
