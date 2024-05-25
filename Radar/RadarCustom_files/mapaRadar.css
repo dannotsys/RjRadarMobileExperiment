@@ -9,6 +9,10 @@
 				min-height: var(--toolbar-height);
 }
 
+.leaflet-layer {
+				filter: url(#reduce-red);
+}
+
 img.leaflet-tile {
 				image-rendering: optimizeQuality;
 }
