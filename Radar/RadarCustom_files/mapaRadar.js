@@ -21,10 +21,16 @@ $(document).ready(function () {
     //Plota o controle de zoom canto inferior direito
     L.control.zoom().setPosition('bottomright').addTo(mymap)
 
+    // Bounds das imagens do radar (suposto ajuste de área coberta...)
+    //var bounds = L.latLngBounds(
+    //    L.latLng(-23.915567, -44.63129),
+    //    L.latLng(-21.974793, -41.813774)
+    //)
+
     // Bounds das imagens do radar
     var bounds = L.latLngBounds(
-        L.latLng(-23.915567, -44.63129),
-        L.latLng(-21.974793, -41.813774)
+        L.latLng(-24.431567, -45.336972),
+        L.latLng(-21.478793, -41.159092)
     )
 
     //Desenha o circulo do alcançe do radar meteorológico
