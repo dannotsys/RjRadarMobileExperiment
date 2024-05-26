@@ -105,7 +105,7 @@ $(document).ready(function () {
                 immagem_maxima = 20;
             }
             else {
-                baseUrl = 'http://www.sistema-alerta-rio.com.br/upload/Mapa/semfundo/radar';
+                baseUrl = 'https://www-sistema--alerta--rio-com-br.translate.goog/upload/Mapa/semfundo/radar';
                 immagem_maxima = 20;
             }
             ultima_imagem_carregada = 0;
@@ -161,6 +161,10 @@ $(document).ready(function () {
         let url = baseUrl + (
             String('000' + imagem).slice(-3)
         ) + '.png?query=' + query;
+
+        if (selectedApiSource == "3") {
+            url = url + '&_x_tr_sch=http&_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt-PT&_x_tr_pto=wapp';
+        }
 
         return url;
     }
