@@ -10,7 +10,7 @@
 }
 
 .leaflet-layer {
-				filter: url(#reduce-red) saturate(1.4) brightness(0.5);
+				filter: url(#reduce-red) saturate(1.4) brightness(0.6);
 }
 
 img.leaflet-tile {
