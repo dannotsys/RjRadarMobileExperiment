@@ -34,9 +34,9 @@ $(document).ready(function () {
     )
 
     //Desenha o circulo do alcançe do radar meteorológico
-    L.circle([-22.960849, -43.2646667],
+    L.circle([-22.929849, -43.2646667],
         {
-            radius: 138900,
+            radius: 138000,
             weight: 3,
             dashArray: '10 10',
             color: '#00F',
@@ -100,9 +100,13 @@ $(document).ready(function () {
                 baseUrl = 'https://bpyu1frhri.execute-api.us-east-1.amazonaws.com/maparadar/radar';
                 immagem_maxima = 20;
             }
-            else {
+            else if (source == "2") {
                 baseUrl = 'https://imagens.climatempo.com.br/georio/radar/radar';
-                immagem_maxima = 10;
+                immagem_maxima = 20;
+            }
+            else {
+                baseUrl = 'http://www.sistema-alerta-rio.com.br/upload/Mapa/semfundo/radar';
+                immagem_maxima = 20;
             }
             ultima_imagem_carregada = 0;
             imagem_atual = 1;
