@@ -32,6 +32,11 @@ img.leaflet-tile {
 				color: white !important;
 }
 
+.leaflet-container .leaflet-control-attribution {
+				background: rgba(255, 255, 255, 0);
+				text-shadow: 1px 1px 2px white;
+}
+
 #mapid {
 				position: relative;
 				outline: none;
@@ -98,7 +103,7 @@ img.leaflet-tile {
 
 .outer-div {
 				position: relative;
-				bottom: 62px; /* Distance from the bottom of the viewport */
+				bottom: 60px; /* Distance from the bottom of the viewport */
 				float: right;
 				right: 50%;
 }
@@ -165,7 +170,7 @@ body {
 }
 
 .form-select {
-				background-color: #fff8 !important;
+				background-color: #fff3 !important;
 				border-width: medium;
 				border-color: #0b5ed799;
 				width: 95px !important;
