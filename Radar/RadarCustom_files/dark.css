@@ -6,7 +6,7 @@
 				}
 
 				.leaflet-layer {
-								filter: url(#reduce-black) hue-rotate(10deg) contrast(1.2) saturate(1.5) brightness(0.08);
+								filter: url(#reduce-black) hue-rotate(16deg) contrast(1.2) saturate(1.5) brightness(0.08);
 				}
 
 				.leaflet-control-attribution {
