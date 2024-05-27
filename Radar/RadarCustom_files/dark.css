@@ -2,22 +2,20 @@
 @media (prefers-color-scheme: dark) {
 
 				.leaflet-container {
-								background-color: #555 !important;
+								background-color: #000 !important;
 				}
 
 				.leaflet-layer {
-								filter: url(#reduce-black) hue-rotate(16deg) contrast(1.2) saturate(1.5) brightness(0.08);
+								filter: invert(100%) url(#reduce-red-dark) hue-rotate(200deg) saturate(0.6) brightness(170%) contrast(101%);
 				}
 
-				.leaflet-control-attribution {
-								background-color: #202e44ff !important;
-								color: white !important;
-				}
+	
 
 				.form-select {
 								background-color: #2228 !important;
 								color: white !important;
 				}
+
 								.form-select option:disabled {
 												color: #ccc !important;
 								}

@@ -34,7 +34,7 @@ img.leaflet-tile {
 
 .leaflet-container .leaflet-control-attribution {
 				background: rgba(255, 255, 255, 0);
-				text-shadow: 1px 1px 2px white;
+				text-shadow: 1px 1px 1px white;
 }
 
 #mapid {
