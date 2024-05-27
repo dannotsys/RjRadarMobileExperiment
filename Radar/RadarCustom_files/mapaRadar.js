@@ -34,9 +34,9 @@ $(document).ready(function () {
     )
 
     //Desenha o circulo do alcançe do radar meteorológico
-    L.circle([-22.929849, -43.2646667],
+    L.circle([-22.959849, -43.2266667],
         {
-            radius: 138000,
+            radius: 143200,
             weight: 3,
             dashArray: '10 10',
             color: '#00F',
