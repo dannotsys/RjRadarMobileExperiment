@@ -2,7 +2,7 @@
 @media (prefers-color-scheme: dark) {
 
 				.leaflet-container {
-								background-color: #303030 !important;
+								background-color: #2a2a2a !important;
 				}
 
 
@@ -12,7 +12,7 @@
 				}
 
 				.leaflet-pane.leaflet-tile-pane > .leaflet-layer {
-								filter: url(#reduce-red-dark) invert(100%) hue-rotate(204deg) saturate(0.6) brightness(47%);
+								filter: url(#reduce-red-dark) invert(100%) hue-rotate(215deg) saturate(0.6) brightness(55%);
 								opacity: 1;
 				}
 
