@@ -2,11 +2,18 @@
 @media (prefers-color-scheme: dark) {
 
 				.leaflet-container {
-								background-color: #000 !important;
+								background-color: #333 !important;
 				}
 
-				.leaflet-layer {
-								filter: invert(100%) url(#reduce-red-dark) hue-rotate(200deg) saturate(0.6) brightness(170%) contrast(101%);
+
+				.leaflet-tile-pane {
+								background-color: #fff !important;
+								opacity: 1 !important;
+				}
+
+				.leaflet-pane.leaflet-tile-pane > .leaflet-layer {
+								filter: url(#reduce-red-dark) invert(100%) hue-rotate(200deg) saturate(0.5) brightness(47%) contrast(98%);
+								opacity: 1;
 				}
 
 	
