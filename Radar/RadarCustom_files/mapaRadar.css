@@ -11,10 +11,11 @@
 
 .leaflet-container {
 				background-color: #fff !important;
+				filter: contrast(110%);
 }
 
 .leaflet-layer {
-				filter: url(#reduce-red) hue-rotate(22deg) saturate(2) brightness(0.75) contrast(110%);
+				filter: url(#reduce-red) hue-rotate(22deg) saturate(2) brightness(0.75);
 }
 
 img.leaflet-tile {
