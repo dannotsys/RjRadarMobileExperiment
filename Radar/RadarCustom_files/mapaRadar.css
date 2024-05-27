@@ -9,8 +9,12 @@
 				min-height: var(--toolbar-height);
 }
 
+.leaflet-container {
+				background-color: #fff !important;
+}
+
 .leaflet-layer {
-				filter: url(#reduce-black) hue-rotate(10deg) contrast(1.06) saturate(2.5) brightness(0.7);
+				filter: url(#reduce-red) hue-rotate(22deg) saturate(2) contrast(0.96) brightness(0.75);
 }
 
 img.leaflet-tile {
