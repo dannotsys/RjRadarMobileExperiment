@@ -2,7 +2,7 @@
 @media (prefers-color-scheme: dark) {
 
 				.leaflet-container {
-								background-color: #222 !important;
+								background-color: #2a2a2a !important;
 				}
 
 				.leaflet-pane.leaflet-tile-pane > .leaflet-layer {
