@@ -12,7 +12,7 @@
 				}
 
 				.leaflet-pane.leaflet-tile-pane > .leaflet-layer {
-								filter: url(#reduce-red-dark) invert(100%) hue-rotate(200deg) saturate(0.5) brightness(47%) contrast(98%);
+								filter: url(#reduce-red-dark) invert(100%) hue-rotate(200deg) saturate(0.5) brightness(47%);
 								opacity: 1;
 				}
 
