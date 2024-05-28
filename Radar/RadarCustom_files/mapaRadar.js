@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     var layerOSM = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?', {
         attribution: '&copy; OpenStreetMap Contributors.',
-        maxZoom: 18,
+        maxZoom: 16,
     });
 
     let defaultZoom = 7;
@@ -34,7 +34,7 @@ $(document).ready(function () {
     )
 
     //Desenha o circulo do alcançe do radar meteorológico
-    L.circle([-22.959849, -43.2266667],
+    L.circle([-22.965849, -43.2496667],
         {
             radius: 143200,
             weight: 3,
