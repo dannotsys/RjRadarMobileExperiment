@@ -14,8 +14,7 @@
 								background-color: #2223 !important;
 								color: white !important;
 				}
-
-								.form-select option:disabled {
-												color: #ccc !important;
+								.form-select option {
+												background-color: #222 !important;
 								}
 }

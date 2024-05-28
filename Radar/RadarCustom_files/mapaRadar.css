@@ -182,6 +182,6 @@ body {
 				border-color: #0b5ed799;
 				width: 95px !important;
 }
-				.form-select option:disabled {
-								color: #999 !important;
+				.form-select option {
+								background-color: #fff !important;
 				}
