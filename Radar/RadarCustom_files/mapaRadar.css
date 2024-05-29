@@ -12,10 +12,6 @@
 				background-color: #fff !important;
 				filter: contrast(110%);
 }
-				img.leaflet-tile, img.leaflet-marker-icon, img.leaflet-marker-shadow {
-								/* work-around from here: https://bugs.chromium.org/p/chromium/issues/detail?id=600120 */
-								mix-blend-mode: plus-lighter;
-				}
 
 .leaflet-layer {
 				filter: url(#reduce-red) hue-rotate(16deg) saturate(1.3) brightness(0.7) contrast(1.15);
