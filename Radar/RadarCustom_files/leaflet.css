@@ -226,6 +226,16 @@
 				cursor: -moz-grabbing;
 }
 
+/* marker & overlays interactivity */
+.leaflet-image-layer {
+	pointer-events: none;
+	}
+
+.leaflet-image-layer.leaflet-interactive,
+svg.leaflet-image-layer.leaflet-interactive path {
+	pointer-events: visiblePainted; /* IE 9-10 doesn't have auto */
+	pointer-events: auto;
+	}
 
 /* visual tweaks */
 
