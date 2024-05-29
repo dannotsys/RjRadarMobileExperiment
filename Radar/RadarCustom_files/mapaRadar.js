@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     var layerOSM = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?', {
         attribution: '',
-        maxZoom: 17,
+        maxZoom: 16,
     });
 
     let defaultZoom = 7;
