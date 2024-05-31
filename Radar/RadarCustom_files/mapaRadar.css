@@ -42,6 +42,18 @@ img.leaflet-tile {
 				text-shadow: 1px 1px 1px white;
 }
 
+.leaflet-right .leaflet-control {
+				margin-right: 8px;
+}
+
+.leaflet-bottom .leaflet-control {
+				margin-bottom: 8px;
+}
+
+.leaflet-control-attribution {
+				display: none;
+}
+
 .filters-svg {
 				height: 0;
 				width: 0;
@@ -158,8 +170,8 @@ body {
 
 .floating-img {
 				position: absolute;
-				bottom: 10px; /* Distance from the bottom of the viewport */
-				left: 10px; /* Distance from the left side of the viewport */
+				bottom: 5px; /* Distance from the bottom of the viewport */
+				left: 5px; /* Distance from the left side of the viewport */
 				width: auto; /* Set the width of the image */
 				height: 134px; /* Maintain aspect ratio */
 				max-height: 33vh;
