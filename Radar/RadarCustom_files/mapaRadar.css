@@ -160,8 +160,9 @@ body {
 				position: absolute;
 				bottom: 10px; /* Distance from the bottom of the viewport */
 				left: 10px; /* Distance from the left side of the viewport */
-				width: 64px; /* Set the width of the image */
-				height: auto; /* Maintain aspect ratio */
+				width: auto; /* Set the width of the image */
+				height: 134px; /* Maintain aspect ratio */
+				max-height: 33vh;
 				z-index: 1000; /* Ensure it's above most other elements */
 }
 
