@@ -6,6 +6,7 @@
 
 .btn-toolbar {
 				min-height: var(--toolbar-height);
+				flex-wrap: nowrap;
 }
 
 .leaflet-container {
@@ -65,37 +66,42 @@ img.leaflet-tile {
 
 .scandate {
 				position: relative;
-				height: var(--toolbar-height);
 				max-width: 100%;
 				width: 100%;
 				overflow: hidden;
 }
 				.scandate > .loadingpainel {
+								position: relative;
+								height: 100%;
+								width: 100%;
+								max-width: 100%;
 								background-color: black;
 								z-index: 10000;
-								max-width: 100%;
 				}
 								.scandate > .loadingpainel > .loading {
+												height: 26px;
+												width: 312px;
+												max-width: 98%;
+												position: absolute;
+												top: 50%;
+												-ms-transform: translateY(-50%);
+												transform: translateY(-50%);
 												object-fit: scale-down;
-												padding: 10px 4vw 10px 20px;
-												height: var(--toolbar-height);
-												max-height: 100%;
-												width: var(--loadingpanel-width);
-												max-width: 100%;
-												margin: auto;
 								}
 				.scandate > .timepainel {
+								height: 100%;
 								width: 100%;
 								max-width: 100%;
 				}
-								.scandate > .timepainel > .timestamp {
-												clip-path: inset(0 69.5% 97.7% 5%);
-												margin-left: -2em;
-												margin-top: calc((var(--toolbar-height) / 2) - (var(--toolbar-height) / 7));
+								.scandate > .timepainel > .timestampcanvas {
+												height: 26px;
+												width: 312px;
 												max-height: 100%;
-												max-width: calc(100% - (100% - 1110px));
-												object-fit: cover;
-												width: calc(50vw + 560px);
+												max-width: 98%;
+												position: absolute;
+												top: 50%;
+												-ms-transform: translateY(-50%);
+												transform: translateY(-50%);
 								}
 
 .clearfix {

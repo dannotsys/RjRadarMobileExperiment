@@ -52,11 +52,20 @@ $(document).ready(function () {
     var baseUrl = 'https://bpyu1frhri.execute-api.us-east-1.amazonaws.com/maparadar/radar';
     var query = Math.random();
     
-    var imageTimeDiv = $('#scandatediv');
     var imageLoading = $('#image_loading');
     var imageLoadingPanel = $('#loadingdiv');
     var apisources = $('#apisources');
-    
+    var canvasTime = document.getElementById('canvas_timestamp');
+    var canvasTimeCtx = canvasTime.getContext("2d");
+    var canvasTimeCtxCropping = {
+        x: 0,
+        y: 0,
+        width: 312,
+        height: 26
+    };
+    canvasTime.width = canvasTimeCtxCropping.width * 2;
+    canvasTime.height = canvasTimeCtxCropping.height * 2;
+
     var selectedApiSource = localStorage.getItem("selectedApiSource");
     if (selectedApiSource == undefined || selectedApiSource == null) {
         selectedApiSource = "1";
@@ -202,8 +211,7 @@ $(document).ready(function () {
 				function carregar_imagem(img) {
         if (ultima_imagem_carregada < imagem_atual) {
 
-            if (imageLoading.is(":visible")) {
-                imageLoading.hide();
+            if (imageLoadingPanel.is(":visible")) {
                 imageLoadingPanel.hide();
             }
 
@@ -211,23 +219,20 @@ $(document).ready(function () {
                 radar.remove();
             }
 
-            let url = get_url(imagem_atual);
-
-            let imageTime = document.getElementById('image_timestamp');
-
-            imageTimeDiv.append(img);
-
             img.id = 'image_timestamp';
+
+            // draw the cropped image onto the canvas element
+            canvasTimeCtx.drawImage(img, canvasTimeCtxCropping.x, canvasTimeCtxCropping.y, canvasTimeCtxCropping.width + 6, canvasTimeCtxCropping.height,
+                10, 12, canvasTimeCtxCropping.width * 2, canvasTimeCtxCropping.height * 2);
+
+            let url = get_url(imagem_atual);
 
             radar = L.imageOverlay(url, bounds).addTo(mymap);
 
             ultima_imagem_carregada = imagem_atual;
-
-            imageTime.remove();
         }
         else {
-            if (imageLoading.is(":visible")) {
-                imageLoading.hide();
+            if (imageLoadingPanel.is(":visible")) {
                 imageLoadingPanel.hide();
             }
         }
