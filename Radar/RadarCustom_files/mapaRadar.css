@@ -180,8 +180,8 @@ body {
 				bottom: 5px; /* Distance from the bottom of the viewport */
 				left: 5px; /* Distance from the left side of the viewport */
 				width: auto; /* Set the width of the image */
-				height: 134px; /* Maintain aspect ratio */
-				max-height: 30vh;
+				height: 133px; /* Maintain aspect ratio */
+				max-height: 31vh;
 				z-index: 1000; /* Ensure it's above most other elements */
 }
 
