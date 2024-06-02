@@ -82,6 +82,7 @@ img.leaflet-tile {
 				width: 100%;
 				overflow: hidden;
 }
+
 				.scandate > .loadingpainel {
 								position: relative;
 								height: 100%;
@@ -90,6 +91,7 @@ img.leaflet-tile {
 								background-color: black;
 								z-index: 10000;
 				}
+
 								.scandate > .loadingpainel > .loading {
 												height: 26px;
 												width: 312px;
@@ -100,11 +102,13 @@ img.leaflet-tile {
 												transform: translateY(-50%);
 												object-fit: scale-down;
 								}
+
 				.scandate > .timepainel {
 								height: 100%;
 								width: 100%;
 								max-width: 100%;
 				}
+
 								.scandate > .timepainel > .timestampcanvas {
 												height: 26px;
 												width: 312px;
@@ -119,6 +123,7 @@ img.leaflet-tile {
 .clearfix {
 				*zoom: 1;
 }
+
 				.clearfix:before,
 				.clearfix:after {
 								content: " ";
@@ -186,10 +191,12 @@ body {
 				right: 1px; /* Distance from the left side of the viewport */
 				z-index: 1001; /* Ensure it's above most other elements */
 }
-.floating-dark-toogle i {
-	color: white;
-	text-shadow: 0px 0px 4px black;
-}	
+
+				.floating-dark-toogle i {
+								color: white;
+								text-shadow: 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
+				}
+
 .apisourcespainel {
 				position: relative;
 				width: 100%; /* Set the width of the image */
@@ -217,6 +224,7 @@ body {
 				border-color: #0b5ed799;
 				width: 95px !important;
 }
+
 				.form-select option {
 								background-color: #fff !important;
 				}
