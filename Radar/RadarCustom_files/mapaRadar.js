@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    validarDarkMode();
 
     var layerOSM = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?', {
         attribution: '',
@@ -70,7 +71,7 @@ $(document).ready(function () {
     if (selectedApiSource == undefined || selectedApiSource == null) {
         selectedApiSource = "1";
     }
-    
+
     mudar_origem_dados(selectedApiSource);
     apisources.val(selectedApiSource);
 
@@ -97,7 +98,36 @@ $(document).ready(function () {
         atualizar();
     })
 
-    // Funcoes de controle das imagens
+    $('#toogle_dark').click(function () {
+        let darkmode = localStorage.getItem("darkMode");
+
+        if (darkmode == undefined || darkmode == null || darkmode == '1') {
+            darkmode = '0';
+        }
+        else {
+            darkmode = '1';
+        }
+
+        localStorage.setItem("darkMode", darkmode);
+
+        validarDarkMode();
+    })
+
+    function validarDarkMode() {
+        const hrefDark = 'RadarCustom_files/dark.css';
+        var darkmode = localStorage.getItem("darkMode");
+
+        if (darkmode == undefined || darkmode == null || darkmode == '0') {
+            $('head').append('<link rel="stylesheet" type="text/css" href="' + hrefDark + '">');
+            $('#toggle_dark_icon').attr("class", "fas fa-eye-slash");
+        }
+        else {
+            $('LINK[href*="' + hrefDark + '"]').remove();
+            $('#toggle_dark_icon').attr("class", "fas fa-eye");
+        }
+    }
+    
+    //  de controle das imagens
     function mudar_origem_dados(source) {
         
         if (source !== undefined) {
