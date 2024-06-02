@@ -182,7 +182,7 @@ body {
 
 .floating-dark-toogle {
 				position: absolute;
-				top: 40px; /* Distance from the bottom of the viewport */
+				top: 45px; /* Distance from the bottom of the viewport */
 				right: 1px; /* Distance from the left side of the viewport */
                                 
 				z-index: 1001; /* Ensure it's above most other elements */
