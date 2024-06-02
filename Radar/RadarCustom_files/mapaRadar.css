@@ -187,7 +187,7 @@ body {
                                 
 				z-index: 1001; /* Ensure it's above most other elements */
 }
-.floating-dark-toogle > i {
+.floating-dark-toogle i {
 	text-shadow: 1px 1px 1px white;
 }	
 .apisourcespainel {
