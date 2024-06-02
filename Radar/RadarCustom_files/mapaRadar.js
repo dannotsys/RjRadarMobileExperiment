@@ -101,11 +101,11 @@ $(document).ready(function () {
     $('#toogle_dark').click(function () {
         let darkmode = localStorage.getItem("darkMode");
 
-        if (darkmode == undefined || darkmode == null || darkmode == '1') {
-            darkmode = '0';
+        if (darkmode == undefined || darkmode == null || darkmode == '0') {
+            darkmode = '1';
         }
         else {
-            darkmode = '1';
+            darkmode = '0';
         }
 
         localStorage.setItem("darkMode", darkmode);
@@ -118,12 +118,13 @@ $(document).ready(function () {
         var darkmode = localStorage.getItem("darkMode");
 
         if (darkmode == undefined || darkmode == null || darkmode == '0') {
-            $('head').append('<link rel="stylesheet" type="text/css" href="' + hrefDark + '">');
-            $('#toggle_dark_icon').attr("class", "fas fa-eye-slash");
-        }
-        else {
             $('LINK[href*="' + hrefDark + '"]').remove();
             $('#toggle_dark_icon').attr("class", "fas fa-eye");
+        }
+        else {
+	    $('head').append('<link rel="stylesheet" type="text/css" href="' + hrefDark + '">');
+            $('#toggle_dark_icon').attr("class", "fas fa-eye-slash");
+            
         }
     }
     
