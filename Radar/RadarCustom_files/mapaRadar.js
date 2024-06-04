@@ -51,6 +51,7 @@ $(document).ready(function () {
     var play = true;
     var radar = null;
     var baseUrl = 'https://bpyu1frhri.execute-api.us-east-1.amazonaws.com/maparadar/radar';
+    var parametrosUrl = '';
     var query = Math.random();
     
     var imageLoading = $('#image_loading');
@@ -138,14 +139,22 @@ $(document).ready(function () {
 
             if (source == "1") {
                 baseUrl = 'https://bpyu1frhri.execute-api.us-east-1.amazonaws.com/maparadar/radar';
+                parametrosUrl = '';
                 immagem_maxima = 20;
             }
             else if (source == "2") {
                 baseUrl = 'https://imagens.climatempo.com.br/georio/radar/radar';
+                parametrosUrl = '';
+                immagem_maxima = 20;
+            }
+            else if (source == "3") {
+                baseUrl = 'https://alertario.rio.rj.gov.br/upload/Mapa/semfundo/radar';
+                parametrosUrl = '';
                 immagem_maxima = 20;
             }
             else {
                 baseUrl = 'https://www-sistema--alerta--rio-com-br.translate.goog/upload/Mapa/semfundo/radar';
+                parametrosUrl = '&_x_tr_sch=http&_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt-PT&_x_tr_pto=wapp'
                 immagem_maxima = 20;
             }
             ultima_imagem_carregada = 0;
@@ -202,9 +211,7 @@ $(document).ready(function () {
             String('000' + imagem).slice(-3)
         ) + '.png?query=' + query;
 
-        if (selectedApiSource == "3") {
-            url = url + '&_x_tr_sch=http&_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt-PT&_x_tr_pto=wapp';
-        }
+        url = url + parametrosUrl;
 
         return url;
     }
