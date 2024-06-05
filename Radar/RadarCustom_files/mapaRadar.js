@@ -120,11 +120,11 @@ $(document).ready(function () {
 
         if (darkmode == undefined || darkmode == null || darkmode == '0') {
             $('LINK[href*="' + hrefDark + '"]').remove();
-            $('#toggle_dark_icon').attr("class", "fas fa-eye");
+            $('#toggle_dark_icon').attr("class", "fas fa-moon");
         }
         else {
 	    $('head').append('<link rel="stylesheet" type="text/css" href="' + hrefDark + '">');
-            $('#toggle_dark_icon').attr("class", "fas fa-eye-slash");
+            $('#toggle_dark_icon').attr("class", "fas fa-sun");
             
         }
     }
