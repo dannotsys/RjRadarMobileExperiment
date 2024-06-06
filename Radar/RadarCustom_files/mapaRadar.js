@@ -120,7 +120,7 @@ $(document).ready(function () {
 
         if (darkmode == undefined || darkmode == null || darkmode == '0') {
             $('LINK[href*="' + hrefDark + '"]').remove();
-            $('#toggle_dark_icon').attr("class", "fas fa-moon");
+            $('#toggle_dark_icon').attr("class", "fas fa-cloud-moon");
         }
         else {
 	    $('head').append('<link rel="stylesheet" type="text/css" href="' + hrefDark + '">');
