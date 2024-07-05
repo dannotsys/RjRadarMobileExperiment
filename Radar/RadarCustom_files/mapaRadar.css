@@ -212,6 +212,7 @@ body {
 
 .leaflet-image-layer.leaflet-zoom-animated {
 				clip-path: circle(42.5% at 50% 50%);
+				-ms-clip-path: circle(42.5% at 50% 50%);
 }
 
 .leaflet-interactive {
