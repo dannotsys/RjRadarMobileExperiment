@@ -35,16 +35,26 @@
 				<script>
 								// self-invoked wrapper for scoping the `document` variable
 								!function (d) {
+												let jsSrc;
+												let cssSrc;
+
 												if (d.currentScript) {
-																var s = d.createElement('script')
-																s.src = 'RadarCustom_files/bootstrap.min.js'
-																d.head.appendChild(s)
+																jsSrc = 'RadarCustom_files/bootstrap.min.js';
+																cssSrc = 'RadarCustom_files/bootstrap.min.css';
 												}
 												else {
-																var s = d.createElement('script')
-																s.src = 'RadarCustom_files/bootstrap4.min.js'
-																d.head.appendChild(s)
+																jsSrc = 'RadarCustom_files/bootstrap4.min.js';
+																cssSrc = 'RadarCustom_files/bootstrap4.min.css';
 												}
+
+												var s = d.createElement('script');
+												s.src = jsSrc;
+												d.head.appendChild(s);
+
+												var s = d.createElement('link');
+												s.href = cssSrc;
+												d.head.appendChild(s);
+
 								}(document)
 				</script>
 
