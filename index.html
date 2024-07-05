@@ -19,32 +19,28 @@
 
 				<link rel="stylesheet" href="RadarCustom_files/font-awesome.css">
 
+				<link rel="stylesheet" href="RadarCustom_files/bootstrap.min.css" id="bootstrapcss">
+
 				<script src="RadarCustom_files/jquery.min.js"></script>
 
 				<script>
 								// self-invoked wrapper for scoping the `document` variable
 								!function (d) {
-												let jsSrc;
-												let cssSrc;
+												if (!d.currentScript) {
 
-												if (d.currentScript) {
-																jsSrc = 'RadarCustom_files/bootstrap.min.js';
-																cssSrc = 'RadarCustom_files/bootstrap.min.css';
+																let sheet = document.getElementById('bootstrapcss');
+																sheet.disabled = true;
+																sheet.parentNode.removeChild(sheet);
+
+																var s = d.createElement('script');
+																s.src = 'RadarCustom_files/bootstrap4.min.js';
+																d.head.appendChild(s);
+
+																s = d.createElement('link');
+																s.rel = 'stylesheet';
+																s.href = 'RadarCustom_files/bootstrap4.min.css';
+																d.head.appendChild(s);
 												}
-												else {
-																jsSrc = 'RadarCustom_files/bootstrap4.min.js';
-																cssSrc = 'RadarCustom_files/bootstrap4.min.css';
-												}
-
-												var s = d.createElement('script');
-												s.src = jsSrc;
-												d.head.appendChild(s);
-
-												s = d.createElement('link');
-												s.rel = 'stylesheet';
-												s.href = cssSrc;
-												d.head.appendChild(s);
-
 								}(document)
 				</script>
 
