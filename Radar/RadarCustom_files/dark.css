@@ -1,21 +1,25 @@
+.leaflet-container {
+				background-color: #333 !important;
+}
 
-@media (prefers-color-scheme: dark) {
+.leaflet-layer {
+				filter: url(#reduce-red-dark) invert(100%) hue-rotate(237deg) grayscale(0.6) brightness(90%) contrast(99%);
+				-ms-filter: invert(100%) hue-rotate(237deg) grayscale(0.6) brightness(90%) contrast(99%);
+				opacity: 1;
+}
 
-				.leaflet-container {
-								background-color: #333 !important;
+.form-select {
+				background-color: #2223 !important;
+				color: white !important;
+}
+
+				.form-select option {
+								background-color: #222 !important;
 				}
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
 				.leaflet-layer {
-								filter: url(#reduce-red-dark) invert(100%) hue-rotate(237deg) grayscale(0.6) brightness(90%) contrast(99%);
-								-ms-filter: invert(100%) hue-rotate(237deg) grayscale(0.6) brightness(90%) contrast(99%);
+								filter: invert(100%) hue-rotate(237deg) grayscale(0.6) brightness(90%) contrast(99%);
 								opacity: 1;
 				}
-
-				.form-select {
-								background-color: #2223 !important;
-								color: white !important;
-				}
-								.form-select option {
-												background-color: #222 !important;
-								}
 }
