@@ -16,19 +16,9 @@
 
 				<link rel="icon" href="data:,">
 
-				<link rel="stylesheet" href="RadarCustom_files/leaflet.css">
-
 				<link rel="stylesheet" href="RadarCustom_files/font-awesome.css">
 
 				<link rel="stylesheet" href="RadarCustom_files/font-awesome.min.css">
-
-				<link rel="stylesheet" href="RadarCustom_files/mapaRadar.css">
-
-				<script src="RadarCustom_files/leaflet.js"></script>
-
-				<script src="RadarCustom_files/jquery.min.js"></script>
-
-				<script src="RadarCustom_files/popper.min.js"></script>
 
 				<script>
 								// self-invoked wrapper for scoping the `document` variable
@@ -49,12 +39,23 @@
 												s.src = jsSrc;
 												d.head.appendChild(s);
 
-												var s = d.createElement('link');
+												s = d.createElement('link');
+												s.rel = 'stylesheet';
 												s.href = cssSrc;
 												d.head.appendChild(s);
 
 								}(document)
 				</script>
+
+				<link rel="stylesheet" href="RadarCustom_files/leaflet.css">
+
+				<link rel="stylesheet" href="RadarCustom_files/mapaRadar.css">
+
+				<script src="RadarCustom_files/leaflet.js"></script>
+
+				<script src="RadarCustom_files/jquery.min.js"></script>
+
+				<script src="RadarCustom_files/popper.min.js"></script>
 
 				<script src="RadarCustom_files/generic.js"></script>
 
