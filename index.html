@@ -30,7 +30,22 @@
 
 				<script src="RadarCustom_files/popper.min.js"></script>
 
-				<script src="RadarCustom_files/bootstrap.min.js"></script>
+				<script>
+								// self-invoked wrapper for scoping the `document` variable
+								!function (d) {
+												if (d.currentScript) {
+																var s = d.createElement('script')
+																s.src = 'RadarCustom_files/bootstrap.min.js'
+																d.head.appendChild(s)
+												}
+												else
+												{
+																var s = d.createElement('script')
+																s.src = 'RadarCustom_files/bootstrap4.min.js'
+																d.head.appendChild(s)
+												}
+								}(document)
+				</script>
 
 				<script src="RadarCustom_files/generic.js"></script>
 
@@ -42,10 +57,10 @@
 				<svg xmlns="http://www.w3.org/2000/svg" class="filters-svg">
 								<defs>
 												<filter id="reduce-red">
-																<feColorMatrix type="matrix" values="1 0 0 0 0  0 0.9 0 0 0  0 0 1 0 0  -1.5 -0.01 1 1 0" />
+																<feColorMatrix type="matrix" values="1 0 0 0 0  0 0.9 0 0 0  0 0 1 0 0  -1.5 -0.01 1 1 0"></feColorMatrix>
 												</filter>
 												<filter id="reduce-red-dark">
-																<feColorMatrix type="matrix" values="1.5 0 0 0 0  0 1.5 0 0 0  0 0 1.7 0 0  -2.4 1 1 1 0" />
+																<feColorMatrix type="matrix" values="1.5 0 0 0 0  0 1.5 0 0 0  0 0 1.7 0 0  -2.4 1 1 1 0"></feColorMatrix>
 												</filter>
 								</defs>
 				</svg>

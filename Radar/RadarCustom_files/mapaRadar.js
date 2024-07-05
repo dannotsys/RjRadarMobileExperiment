@@ -68,7 +68,7 @@ $(document).ready(function () {
     canvasTime.width = canvasTimeCtxCropping.width * 2;
     canvasTime.height = canvasTimeCtxCropping.height * 2;
 
-    var selectedApiSource = localStorage.getItem("selectedApiSource");
+    var selectedApiSource = window.localStorage.getItem("selectedApiSource");
     if (selectedApiSource == undefined || selectedApiSource == null) {
         selectedApiSource = "1";
     }
@@ -100,7 +100,7 @@ $(document).ready(function () {
     })
 
     $('#toogle_dark').click(function () {
-        let darkmode = localStorage.getItem("darkMode");
+        let darkmode = window.localStorage.getItem("darkMode");
 
         if (darkmode == undefined || darkmode == null || darkmode == '0') {
             darkmode = '1';
@@ -116,7 +116,7 @@ $(document).ready(function () {
 
     function validarDarkMode() {
         const hrefDark = 'RadarCustom_files/dark.css';
-        var darkmode = localStorage.getItem("darkMode");
+        var darkmode = window.localStorage.getItem("darkMode");
 
         if (darkmode == undefined || darkmode == null || darkmode == '0') {
             $('LINK[href*="' + hrefDark + '"]').remove();
