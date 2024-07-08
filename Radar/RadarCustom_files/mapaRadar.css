@@ -213,6 +213,7 @@ body {
 
 .leaflet-image-layer.leaflet-zoom-animated {
 				clip-path: circle(42.5% at 50% 50%);
+				border-top-left-radius: 50% 100%; /* Trash workaround for ie11 */
 }
 
 .leaflet-interactive {
