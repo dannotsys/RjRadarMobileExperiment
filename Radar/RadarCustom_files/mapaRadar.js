@@ -30,12 +30,12 @@ $(document).ready(function () {
 
     // Bounds das imagens do radar
     var bounds = L.latLngBounds(
-        L.latLng(-24.431567, -45.336972),
-        L.latLng(-21.478793, -41.159092)
+        L.latLng(-24.431567, -45.376972),
+        L.latLng(-21.478793, -41.129092)
     )
 
     //Desenha o circulo do alcançe do radar meteorológico
-    L.circle([-22.959849, -43.2486667],
+    L.circle([-22.959849, -43.2726667],
         {
             radius: 141200,
             weight: 3,
