@@ -3,7 +3,7 @@
 }
 
 .leaflet-layer {
-				filter: url(#reduce-red-dark) invert(100%) hue-rotate(237deg) grayscale(0.8) brightness(82%) contrast(110%);
+				filter: url(#reduce-red-dark) invert(100%) hue-rotate(237deg) grayscale(0.83) brightness(82%) contrast(110%);
 				opacity: 1;
 }
 
@@ -15,10 +15,3 @@
 				.form-select option {
 								background-color: #222 !important;
 				}
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-				.leaflet-layer {
-								filter: invert(100%) hue-rotate(237deg) grayscale(0.6) brightness(90%) contrast(99%) !important;
-								opacity: 1;
-				}
-}
