@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    validarDarkMode();
+    validarElementsDarkMode();
 
     var layerOSM = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?', {
         attribution: '',
@@ -111,24 +111,10 @@ $(document).ready(function () {
 
         localStorage.setItem("darkMode", darkmode);
 
-        validarDarkMode();
+        validarCssLinkDarkMode();
+        validarElementsDarkMode();
     })
-
-    function validarDarkMode() {
-        const hrefDark = 'RadarCustom_files/dark.css';
-        var darkmode = window.localStorage.getItem("darkMode");
-
-        if (darkmode == undefined || darkmode == null || darkmode == '0') {
-            $('LINK[href*="' + hrefDark + '"]').remove();
-            $('#toggle_dark_icon').attr("class", "fas fa-cloud-moon");
-        }
-        else {
-	    $('head').append('<link rel="stylesheet" type="text/css" href="' + hrefDark + '">');
-            $('#toggle_dark_icon').attr("class", "fas fa-sun");
-            
-        }
-    }
-    
+        
     //  de controle das imagens
     function mudar_origem_dados(source) {
         

@@ -23,9 +23,12 @@
 
 				<script src="RadarCustom_files/jquery.min.js"></script>
 
+				<script src="RadarCustom_files/generic.js"></script>
+
 				<script>
 								// self-invoked wrapper for scoping the `document` variable
 								!function (d) {
+												
 												if (!d.currentScript) {
 
 																let sheet = document.getElementById('bootstrapcss');
@@ -45,6 +48,7 @@
 																s.textContent = '.floating-dark-toogle { visibility: hidden !important; }';
 																d.head.appendChild(s);
 												}
+
 								}(document)
 				</script>
 
@@ -56,13 +60,13 @@
 
 				<script src="RadarCustom_files/popper.min.js"></script>
 
-				<script src="RadarCustom_files/generic.js"></script>
-
 				<script src="RadarCustom_files/mapaRadar.js"></script>
-
 </head>
 
 <body>
+				<script>
+								validarCssLinkDarkMode();
+				</script>
 				<svg xmlns="http://www.w3.org/2000/svg" class="filters-svg">
 								<defs>
 												<filter id="reduce-red">
@@ -73,32 +77,32 @@
 												</filter>
 								</defs>
 				</svg>
-								<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-												<div class="btn-group">
-																<button id="backward" type="button" class="btn btn-primary">
-																				<i id="backward_icon"
-																							class="fas fa-step-backward"></i>
-																</button>
-																<button id="play_pause" type="button" class="btn btn-primary">
-																				<i id="play_pause_icon"
-																							class="fas fa-play"></i>
-																</button>
-																<button id="forward" type="button" class="btn btn-primary">
-																				<i id="forward_icon"
-																							class="fas fa-step-forward"></i>
-																</button>
-																<button id="reload" type="button" class="btn btn-primary"><i id="reload_icon" class="fas fa-sync-alt"></i></button>
+				<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+								<div class="btn-group">
+												<button id="backward" type="button" class="btn btn-primary">
+																<i id="backward_icon"
+																			class="fas fa-step-backward"></i>
+												</button>
+												<button id="play_pause" type="button" class="btn btn-primary">
+																<i id="play_pause_icon"
+																			class="fas fa-play"></i>
+												</button>
+												<button id="forward" type="button" class="btn btn-primary">
+																<i id="forward_icon"
+																			class="fas fa-step-forward"></i>
+												</button>
+												<button id="reload" type="button" class="btn btn-primary"><i id="reload_icon" class="fas fa-sync-alt"></i></button>
 
+								</div>
+								<div class="scandate">
+												<div class="loadingpainel" id="loadingdiv" style="display:none;">
+																<img class="loading" src="RadarCustom_files/loading.gif" id="image_loading" style="display:none;" />
 												</div>
-												<div class="scandate">
-																<div class="loadingpainel" id="loadingdiv" style="display:none;">
-																				<img class="loading" src="RadarCustom_files/loading.gif" id="image_loading" style="display:none;" />
-																</div>
-																<div class="timepainel" id="scandatediv">
-																				<canvas class="timestampcanvas" id="canvas_timestamp"></canvas>
-																</div>
+												<div class="timepainel" id="scandatediv">
+																<canvas class="timestampcanvas" id="canvas_timestamp"></canvas>
 												</div>
 								</div>
+				</div>
 
 				<div id="mapid"
 									class="leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
@@ -109,7 +113,7 @@
 
 				<div class="btn-group floating-dark-toogle">
 								<button id="toogle_dark" type="button" class="btn">
-												<i id="toggle_dark_icon"></i>
+												<i id="toggle_dark_icon" class="fas"></i>
 								</button>
 				</div>
 
