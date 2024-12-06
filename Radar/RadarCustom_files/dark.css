@@ -3,11 +3,11 @@ body {
 }
 
 .leaflet-container {
-				background-color: #5c5c5d !important;
+				background-color: #5c5c5c !important;
 }
 
 .leaflet-layer {
-				filter: url(#reduce-red-dark) invert(100%) hue-rotate(237deg) grayscale(0.5) brightness(90%) contrast(2.8) opacity(0.7);
+				filter: url(#reduce-red-dark) invert(100%) hue-rotate(237deg) grayscale(0.7) brightness(90%) contrast(2.8) opacity(0.67);
 				opacity: 1;
 }
 
