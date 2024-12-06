@@ -3,7 +3,7 @@
 }
 
 .leaflet-layer {
-				filter: url(#reduce-red-dark) invert(100%) hue-rotate(239deg) grayscale(0.7) brightness(72%) contrast(1.82);
+				filter: url(#reduce-red-dark) invert(100%) hue-rotate(239deg) grayscale(0.75) brightness(72%) contrast(1.82);
 }
 
 .form-select {
