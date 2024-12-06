@@ -11,7 +11,6 @@
 
 .leaflet-container {
 				background-color: #fff !important;
-				filter: contrast(110%);
 }
 
 .leaflet-layer {
