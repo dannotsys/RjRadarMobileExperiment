@@ -1,9 +1,9 @@
 .leaflet-container {
-				background-color: #5b5b5f !important;
+				background-color: #4c4c4c !important;
 }
 
 .leaflet-layer {
-				filter: url(#reduce-red-dark) invert(100%) hue-rotate(239deg) grayscale(0.75) brightness(0.72) contrast(1.82) opacity(0.87);
+				filter: url(#reduce-red-dark) invert(100%) hue-rotate(260deg) grayscale(0.85) brightness(0.9) contrast(1.16) opacity(0.8);
 }
 
 .form-select {
