@@ -6,6 +6,10 @@
 				filter: url(#reduce-red-dark) invert(100%) hue-rotate(296deg) grayscale(0.8) contrast(1.1) brightness(0.96);
 }
 
+.leaflet-image-layer {
+				opacity: 0.76;
+}
+
 .form-select {
 				background-color: #2223 !important;
 				color: white !important;
