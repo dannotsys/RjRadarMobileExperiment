@@ -2,7 +2,7 @@
 				background-color: #5d5d5d !important;
 }
 
-.leaflet-layer {
+.leaflet-tile {
 				filter: url(#reduce-red-dark) invert(100%) hue-rotate(296deg) grayscale(0.8) contrast(1.15) brightness(0.95) opacity(0.9);
 }
 

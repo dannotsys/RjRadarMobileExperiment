@@ -13,7 +13,7 @@
 				background-color: #fff !important;
 }
 
-.leaflet-layer {
+.leaflet-tile {
 				filter: url(#reduce-red) hue-rotate(10deg) brightness(0.6) contrast(1.08) grayscale(0.16) opacity(1);
 }
 
