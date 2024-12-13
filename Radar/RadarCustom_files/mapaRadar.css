@@ -14,7 +14,7 @@
 }
 
 .leaflet-layer {
-				filter: url(#reduce-red) hue-rotate(15deg) saturate(1.2) brightness(0.3) contrast(1.06) opacity(0.87);
+				filter: url(#reduce-red) hue-rotate(10deg) brightness(0.6) contrast(1.01) grayscale(0.3) opacity(1);
 }
 
 .leaflet-image-layer {
