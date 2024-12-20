@@ -266,6 +266,8 @@ $(document).ready(function () {
     // função para atualizar as imagens caso esteja vindo do cache
     function atualizar() {
         query = Math.random();
+        ultima_imagem_carregada = 0;
+
         mostrar_imagem();
     }
 
