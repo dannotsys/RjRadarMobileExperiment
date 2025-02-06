@@ -233,12 +233,12 @@ body {
 								background-color: transparent;
 								border: 0px;
 								align-self: center;
-								color: red;
+								color: orange;
 								font-size: 20px;
 				}
 				.apisourcespainel i {
 								align-self: center;
-								text-shadow: #000 0px 0 6px;
+								text-shadow: #000 0px 0 4px;
 				}
 
 [aria-label][role~="tooltip"]::after {
