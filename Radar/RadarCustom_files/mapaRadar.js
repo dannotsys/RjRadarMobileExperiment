@@ -3,6 +3,7 @@ $(document).ready(function () {
 
     var layerOSM = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?', {
         attribution: '',
+        minZoom: 3,
         maxZoom: 16,
     });
 
@@ -222,27 +223,6 @@ $(document).ready(function () {
         img.src = url;
     }
 
-    function loadInfoMessage()
-    {
-        fetch('https://corsproxy.io/?url=https://www.sistema-alerta-rio.com.br/upload/Mapa/str.json')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.text();
-            })
-            .then(htmlString => {
-                const data = JSON.parse(htmlString);
-                infoJson.setAttribute('aria-label', data.estado.toUpperCase() + ' em ' + data.data + ':\n ' + data.descricao);
-                infoJson.style = 'visibility: visible;';
-            })
-            .catch(error => {
-                console.error('Error fetching or parsing the HTML file:', error);
-            });
-
-        return '';
-    }
-
     function isHanging() {
         if (imageLoadingPanel.is(":hidden")) {
             imageLoading.removeClass('easeload');
@@ -285,12 +265,36 @@ $(document).ready(function () {
 
 				}
 
+    function loadInfoMessage() {
+        infoJson.style = 'visibility: hidden;';
+
+        fetch('https://corsproxy.io/?url=https://www.sistema-alerta-rio.com.br/upload/Mapa/str.json?query=' + query)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(htmlString => {
+                const data = JSON.parse(htmlString);
+                infoJson.setAttribute('aria-label', data.estado.toUpperCase() + ' (atualizado às ' + data.data + ')\n ' + data.descricao);
+                infoJson.style = 'visibility: visible;';
+            })
+            .catch(error => {
+                console.error('Error fetching or parsing the HTML file:', error);
+            });
+
+        return '';
+    }
+
     // função para atualizar as imagens caso esteja vindo do cache
     function atualizar() {
         query = Math.random();
         ultima_imagem_carregada = 0;
 
         mostrar_imagem();
+
+        loadInfoMessage();
     }
 
     loadInfoMessage();
