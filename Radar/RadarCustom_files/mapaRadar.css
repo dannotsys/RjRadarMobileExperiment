@@ -241,17 +241,31 @@ body {
 								text-shadow: #000 0px 0 4px;
 				}
 
-[aria-label][role~="tooltip"]::after {
-				background-color: #0d6efd !important;
-}
-
 [role~="tooltip"][data-microtip-position|="top"]::after {
 				max-width: 90vw;
 				min-width: 60vw;
 				display: inline;
 				white-space: pre-wrap !important;
-				/*				word-break: break-word;
-				overflow-wrap: break-word;*/
+}
+
+[aria-label][role~="tooltip"]::after {
+				background-color: #0d6efd !important;
+}
+
+[role~="tooltip"][data-microtip-position|="top"]::before {
+				filter: invert(25%) sepia(76%) saturate(2653%) hue-rotate(211deg) brightness(106%) contrast(98%);
+}
+
+[role~="tooltip"][data-microtip-position|="bottom"]::before {
+				filter: invert(25%) sepia(76%) saturate(2653%) hue-rotate(211deg) brightness(106%) contrast(98%);
+}
+
+[role~="tooltip"][data-microtip-position="left"]::before {
+				filter: invert(25%) sepia(76%) saturate(2653%) hue-rotate(211deg) brightness(106%) contrast(98%);
+}
+
+[role~="tooltip"][data-microtip-position="right"]::before {
+				filter: invert(25%) sepia(76%) saturate(2653%) hue-rotate(211deg) brightness(106%) contrast(98%);
 }
 
 .leaflet-control-layers {
