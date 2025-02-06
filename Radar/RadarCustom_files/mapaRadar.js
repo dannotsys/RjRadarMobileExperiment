@@ -57,6 +57,7 @@ $(document).ready(function () {
     var imageLoading = $('#image_loading');
     var imageLoadingPanel = $('#loadingdiv');
     var apisources = $('#apisources');
+    var infoJson = document.getElementById('infoJson');
     var canvasTime = document.getElementById('canvas_timestamp');
     var canvasTimeCtx = canvasTime.getContext("2d");
     var canvasTimeCtxCropping = {
@@ -114,7 +115,7 @@ $(document).ready(function () {
         validarCssLinkDarkMode();
         validarElementsDarkMode();
     })
-        
+
     //  de controle das imagens
     function mudar_origem_dados(source) {
         
@@ -221,6 +222,27 @@ $(document).ready(function () {
         img.src = url;
     }
 
+    function loadInfoMessage()
+    {
+        fetch('https://corsproxy.io/?url=https://www.sistema-alerta-rio.com.br/upload/Mapa/str.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(htmlString => {
+                const data = JSON.parse(htmlString);
+                infoJson.setAttribute('aria-label', data.estado.toUpperCase() + ' em ' + data.data + ':\n ' + data.descricao);
+                infoJson.style = 'visibility: visible;';
+            })
+            .catch(error => {
+                console.error('Error fetching or parsing the HTML file:', error);
+            });
+
+        return '';
+    }
+
     function isHanging() {
         if (imageLoadingPanel.is(":hidden")) {
             imageLoading.removeClass('easeload');
@@ -271,4 +293,5 @@ $(document).ready(function () {
         mostrar_imagem();
     }
 
+    loadInfoMessage();
 });

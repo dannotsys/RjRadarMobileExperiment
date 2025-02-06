@@ -4,6 +4,11 @@
 				--loadingpanel-width: calc((40vw + var(--difference)) / 4.7 );
 }
 
+.unseen-render {
+				max-width: 0px;
+				max-height: 0px;
+}
+
 .btn-toolbar {
 				min-height: var(--toolbar-height);
 				flex-wrap: nowrap;
@@ -178,7 +183,7 @@ body {
 				filter: hue-rotate(0deg) !important;
 }
 
-.floating-img {
+.floating-legend {
 				position: absolute;
 				bottom: 5px; /* Distance from the bottom of the viewport */
 				left: 5px; /* Distance from the left side of the viewport */
@@ -187,6 +192,16 @@ body {
 				max-height: 31vh;
 				z-index: 1000; /* Ensure it's above most other elements */
 }
+				.floating-legend div {
+								display: flex;
+								justify-content: center;
+								height: 100%;
+								width: 100%;
+				}
+				.floating-legend .radar-colors {
+								height: 100%;
+								width: 100%;
+				}
 
 .floating-dark-toogle {
 				position: absolute;
@@ -201,6 +216,8 @@ body {
 				}
 
 .apisourcespainel {
+				display: flex;
+				flex-direction: column;
 				position: relative;
 				width: 100%; /* Set the width of the image */
 				height: auto; /* Maintain aspect ratio */
@@ -212,6 +229,30 @@ body {
 								margin: auto;
 								width: auto;
 				}
+				.apisourcespainel button {
+								background-color: transparent;
+								border: 0px;
+								align-self: center;
+								color: red;
+								font-size: 20px;
+				}
+				.apisourcespainel i {
+								align-self: center;
+								text-shadow: #000 0px 0 6px;
+				}
+
+[aria-label][role~="tooltip"]::after {
+				background-color: #0d6efd !important;
+}
+
+[role~="tooltip"][data-microtip-position|="top"]::after {
+				max-width: 90vw;
+				min-width: 60vw;
+				display: inline;
+				white-space: pre-wrap !important;
+				/*				word-break: break-word;
+				overflow-wrap: break-word;*/
+}
 
 .leaflet-control-layers {
 				background: black !important;

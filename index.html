@@ -28,7 +28,7 @@
 				<script>
 								// self-invoked wrapper for scoping the `document` variable
 								!function (d) {
-												
+
 												if (!d.currentScript) {
 
 																let sheet = document.getElementById('bootstrapcss');
@@ -55,6 +55,8 @@
 				<link rel="stylesheet" href="RadarCustom_files/leaflet.css">
 
 				<link rel="stylesheet" href="RadarCustom_files/mapaRadar.css">
+
+				<link rel="stylesheet" href="RadarCustom_files/microtip.css">
 
 				<script src="RadarCustom_files/leaflet.js"></script>
 
@@ -109,7 +111,12 @@
 									tabindex="0">
 				</div>
 
-				<img title="Intensidade" src="RadarCustom_files/legend.png" alt="Legenda" class="floating-img radar-colors">
+				<div class="floating-legend">
+												<div style="">
+																<img title="Intensidade" src="RadarCustom_files/legend.png" alt="Legenda" class="radar-colors">
+												</div>
+				</div>
+				
 
 				<div class="btn-group floating-dark-toogle">
 								<button id="toogle_dark" type="button" class="btn">
@@ -121,6 +128,9 @@
 								<div class="outer-div">
 												<div class="inner-div">
 																<div class="apisourcespainel" id="apisourcediv">
+																				<button id="infoJson" class="btn-toolbar" aria-label="" data-microtip-position="top" data-microtip-size="fit" role="tooltip" style="visibility:hidden;">
+																								<i class="fas fa-exclamation-circle"></i>
+																				</button>
 																				<select class="form-select form-select-sm" name="apisources" id="apisources">
 																								<option disabled selected value="">Data source</option>
 																								<option value="1">CR</option>
@@ -132,8 +142,6 @@
 												</div>
 								</div>
 				</div>
-
-
 
 </body>
 
