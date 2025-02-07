@@ -277,7 +277,11 @@ $(document).ready(function () {
             })
             .then(htmlString => {
                 const data = JSON.parse(htmlString);
-                infoJson.setAttribute('aria-label', data.estado.toUpperCase() + ' (atualizado às ' + data.data + ')\n ' + data.descricao);
+		const estado = data.estado.toUpperCase();
+                if (estado.includes('NORMAL')) {
+		    return '';
+		}  
+                infoJson.setAttribute('aria-label', estado + ' (atualizado às ' + data.data + ')\n ' + data.descricao);
                 infoJson.style = 'visibility: visible;';
             })
             .catch(error => {
