@@ -184,7 +184,7 @@ body {
 }
 
 .radar-colors, .leaflet-image-layer {
-				filter: hue-rotate(0deg) !important;
+				filter: hue-rotate(0deg) saturate(1.2) !important;
 }
 
 .floating-legend {

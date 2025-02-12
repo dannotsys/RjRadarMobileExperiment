@@ -1,13 +1,13 @@
 .leaflet-container {
-				background-color: #666 !important;
+				background-color: #595959 !important;
 }
 
 .leaflet-tile {
-				filter: url(#reduce-red-dark) invert(100%) hue-rotate(300deg) grayscale(0.83) contrast(1.11) brightness(0.96);
+				filter: url(#reduce-red-dark) invert(100%) hue-rotate(300deg) grayscale(0.83) contrast(1.12) brightness(0.99);
 }
 
 .leaflet-image-layer {
-				opacity: 0.76;
+				opacity: 0.8;
 }
 
 .form-select {
@@ -18,7 +18,3 @@
 				.form-select option {
 								background-color: #222 !important;
 				}
-
-.radar-colors, .leaflet-image-layer {
-				filter: hue-rotate(0deg) !important;
-}
