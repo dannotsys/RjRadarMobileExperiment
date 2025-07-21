@@ -185,7 +185,7 @@ body {
 
 .leaflet-container img.leaflet-image-layer {
 				opacity: 0.66 !important;
-				filter: hue-rotate(0deg) saturate(1.2) drop-shadow(0 0 1px blue) drop-shadow(0 0 0px blue) drop-shadow(0 0 0px blue) drop-shadow(0 0 0px blue) !important;
+				filter: hue-rotate(0deg) saturate(1.2) !important;
 }
 
 .floating-legend {
