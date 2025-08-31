@@ -1,7 +1,7 @@
 $(document).ready(function () {
     validarElementsDarkMode();
 
-    var layerOSM = L.tileLayer('https://mt.google.com/vt/lyrs=m,traffic&x={x}&y={y}&z={z}', {
+    var layerOSM = L.tileLayer('https://mt.google.com/vt/lyrs=m&x={x}&y={y}&z={z}&apistyle=s.t%3A3|s.e%3Al|p.v%', {
         attribution: '',
         minZoom: 3,
         maxZoom: 16,
