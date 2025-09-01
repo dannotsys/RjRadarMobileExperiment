@@ -304,5 +304,5 @@ $(document).ready(function () {
 
     loadInfoMessage();
 
-    atualizar();
+    play_pause();
 });
