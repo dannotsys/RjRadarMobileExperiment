@@ -127,12 +127,12 @@ $(document).ready(function () {
             localStorage.setItem("selectedApiSource", source);
 
             if (source == "1") {
-                baseUrl = 'https://bpyu1frhri.execute-api.us-east-1.amazonaws.com/maparadar/radar';
+                baseUrl = 'https://imagens.climatempo.com.br/georio/radar/radar';
                 parametrosUrl = '';
                 immagem_maxima = 20;
             }
             else if (source == "2") {
-                baseUrl = 'https://imagens.climatempo.com.br/georio/radar/radar';
+                baseUrl = 'https://bpyu1frhri.execute-api.us-east-1.amazonaws.com/maparadar/radar';
                 parametrosUrl = '';
                 immagem_maxima = 20;
             }
@@ -278,10 +278,10 @@ $(document).ready(function () {
             })
             .then(htmlString => {
                 const data = JSON.parse(htmlString);
-		const estado = data.estado.toUpperCase();
-                if (estado.includes('NORMAL')) {
-		    return '';
-		}  
+		              const estado = data.estado.toUpperCase();
+                            if (estado.includes('NORMAL')) {
+		                  return '';
+		              }  
                 infoJson.setAttribute('aria-label', estado + ' (atualizado às ' + data.data + ')\n ' + data.descricao);
                 infoJson.style = 'visibility: visible;';
             })
@@ -303,4 +303,6 @@ $(document).ready(function () {
     }
 
     loadInfoMessage();
+
+    atualizar();
 });
