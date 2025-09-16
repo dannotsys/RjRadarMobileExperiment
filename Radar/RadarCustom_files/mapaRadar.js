@@ -129,7 +129,7 @@ $(document).ready(function () {
             if (source == "1") {
                 baseUrl = 'https://imagens.climatempo.com.br/georio/radar/radar';
                 parametrosUrl = '';
-                immagem_maxima = 20;
+                immagem_maxima = 10;
             }
             else if (source == "2") {
                 baseUrl = 'https://bpyu1frhri.execute-api.us-east-1.amazonaws.com/maparadar/radar';
