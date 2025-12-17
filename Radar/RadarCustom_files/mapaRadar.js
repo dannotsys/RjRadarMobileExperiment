@@ -142,8 +142,8 @@ $(document).ready(function () {
                 immagem_maxima = 20;
             }
             else {
-                baseUrl = 'https://www-sistema--alerta--rio-com-br.translate.goog/upload/Mapa/semfundo/radar';
-                parametrosUrl = '&_x_tr_sch=http&_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt-PT&_x_tr_pto=wapp'
+                baseUrl = 'https://www.sistema-alerta-rio.com.br/upload/Mapa/semfundo/radar';
+                parametrosUrl = ''
                 immagem_maxima = 20;
             }
             ultima_imagem_carregada = 0;
