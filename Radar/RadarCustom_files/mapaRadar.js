@@ -157,7 +157,16 @@ $(document).ready(function () {
             proxima_imagem();
         }, 1000);
     }
-
+	
+	function flipOverlayVertically(image) {
+	    if (!image.originalTransformValue) {
+	        // Store original transform value applied by Leaflet (e.g., translate3d(...))
+	        image.originalTransformValue = image.style.transform;
+	    }
+	    // Append the scaleX(-1) transform
+	    image.style.transform = `${image.originalTransformValue} scaleY(-1)`;
+	}
+	
     function play_pause() {
         if (play) {
             ligar_intervalo_radar();
@@ -235,7 +244,7 @@ $(document).ready(function () {
         }
     }
 
-				function carregar_imagem(img) {
+	function carregar_imagem(img) {
         if (ultima_imagem_carregada < imagem_atual) {
 
             if (imageLoadingPanel.is(":visible")) {
@@ -254,8 +263,12 @@ $(document).ready(function () {
 
             let url = get_url(imagem_atual);
 
-            radar = L.imageOverlay(url, bounds).addTo(mymap);
+			let imgOverlay = L.imageOverlay(url, bounds);
+			
+            radar = imgOverlay.addTo(mymap);
 
+			flipOverlayVertically(imgOverlay);
+			
             ultima_imagem_carregada = imagem_atual;
         }
         else {
@@ -263,8 +276,7 @@ $(document).ready(function () {
                 imageLoadingPanel.hide();
             }
         }
-
-				}
+	}
 
     function loadInfoMessage() {
         infoJson.style = 'visibility: hidden;';
