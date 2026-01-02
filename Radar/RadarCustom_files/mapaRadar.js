@@ -261,8 +261,10 @@ $(document).ready(function () {
 			let imgOverlay = L.imageOverlay(url, bounds);
 			
             radar = imgOverlay.addTo(mymap);
+
+			let imgOverlay = radar.getElement();
 			
-			flipOverlayVertically(radar);
+			flipOverlayVertically(imgOverlay);
 			
             ultima_imagem_carregada = imagem_atual;
         }
