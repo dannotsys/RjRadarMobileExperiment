@@ -262,7 +262,7 @@ $(document).ready(function () {
 
 			let imgOverlay = radar.getElement();
 			
-			flipOverlayVertically(imgOverlay);
+			//flipOverlayVertically(imgOverlay);
 			
             ultima_imagem_carregada = imagem_atual;
         }
