@@ -259,12 +259,10 @@ $(document).ready(function () {
             let url = get_url(imagem_atual);
 
 			let imgOverlay = L.imageOverlay(url, bounds);
-
-			let imageElement = imgOverlay.getElement();
-			
-			flipOverlayVertically(imageElement);
 			
             radar = imgOverlay.addTo(mymap);
+			
+			flipOverlayVertically(radar);
 			
             ultima_imagem_carregada = imagem_atual;
         }
