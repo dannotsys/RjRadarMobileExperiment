@@ -257,10 +257,8 @@ $(document).ready(function () {
                 10, 12, canvasTimeCtxCropping.width * 2, canvasTimeCtxCropping.height * 2);
 
             let url = get_url(imagem_atual);
-
-			let imgOverlay = L.imageOverlay(url, bounds);
 			
-            radar = imgOverlay.addTo(mymap);
+            radar = L.imageOverlay(url, bounds).addTo(mymap);
 
 			let imgOverlay = radar.getElement();
 			
