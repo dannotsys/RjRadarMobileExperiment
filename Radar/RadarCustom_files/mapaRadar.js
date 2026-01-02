@@ -158,13 +158,8 @@ $(document).ready(function () {
         }, 1000);
     }
 	
-	function flipOverlayVertically(image) {
-	    if (!image.originalTransformValue) {
-	        // Store original transform value applied by Leaflet (e.g., translate3d(...))
-	        image.originalTransformValue = image.style.transform;
-	    }
-	    // Append the scaleX(-1) transform
-	    image.style.transform = `${image.originalTransformValue} scaleY(-1)`;
+	function flipOverlayVertically(img) {
+	    img.style.transform += ' scaleY(-1)';
 	}
 	
     function play_pause() {
