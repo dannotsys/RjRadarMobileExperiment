@@ -15,9 +15,11 @@
 }
 
 .leaflet-container {
-				background-color: #fff !important;
+    background-color: #fff !important;
 }
-
+    .leaflet-container img.leaflet-tile {
+        mix-blend-mode: normal !important;
+    }
 .leaflet-tile {
 				filter: url(#reduce-red) hue-rotate(6deg) grayscale(0.1) contrast(1.1) brightness(0.5);
 }
@@ -184,6 +186,7 @@ body {
 }
 
 .radar-colors {
+	max-width: 64px;
 				filter: hue-rotate(0deg) saturate(1.2);
 }
 
