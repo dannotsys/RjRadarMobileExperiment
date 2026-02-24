@@ -73,7 +73,7 @@ $(document).ready(function () {
 
     var selectedApiSource = window.localStorage.getItem("selectedApiSource");
     if (selectedApiSource == undefined || selectedApiSource == null) {
-        selectedApiSource = "1";
+        selectedApiSource = "4";
     }
 
     mudar_origem_dados(selectedApiSource);
