@@ -47,6 +47,7 @@ $(document).ready(function () {
         }).addTo(mymap);
 
     var intervalo_radar = null;
+    var imagem_incremento = 1;
     var imagem_atual = 1;
     var immagem_maxima = 20;
     var ultima_imagem_carregada = 0;
@@ -129,25 +130,29 @@ $(document).ready(function () {
             if (source == "1") {
                 baseUrl = 'https://imagens.climatempo.com.br/georio/radar/radar';
                 parametrosUrl = '';
+                imagem_incremento = 1;
                 immagem_maxima = 10;
             }
             else if (source == "2") {
                 baseUrl = 'https://bpyu1frhri.execute-api.us-east-1.amazonaws.com/maparadar/radar';
                 parametrosUrl = '';
+                imagem_incremento = 1;
                 immagem_maxima = 20;
             }
             else if (source == "3") {
                 baseUrl = 'https://alertario.rio.rj.gov.br/upload/Mapa/semfundo/radar';
                 parametrosUrl = '';
+                imagem_incremento = 2;
                 immagem_maxima = 20;
             }
             else {
                 baseUrl = 'https://www.sistema-alerta-rio.com.br/upload/Mapa/semfundo/radar';
                 parametrosUrl = ''
+                imagem_incremento = 1;
                 immagem_maxima = 20;
             }
             ultima_imagem_carregada = 0;
-            imagem_atual = 1;
+            imagem_atual = imagem_incremento;
         }
     }
 
@@ -180,9 +185,9 @@ $(document).ready(function () {
 
     function proxima_imagem() {
         if (imagem_atual < immagem_maxima) {
-            imagem_atual += 1;
+            imagem_atual += imagem_incremento;
         } else {
-            imagem_atual = 1;
+            imagem_atual = imagem_incremento;
         }
         ultima_imagem_carregada = 0;
         mostrar_imagem();
@@ -190,7 +195,7 @@ $(document).ready(function () {
 
     function imagem_anterior() {
         if (imagem_atual > 1) {
-            imagem_atual -= 1;
+            imagem_atual -= imagem_incremento;
         } else {
             imagem_atual = immagem_maxima;
         }
