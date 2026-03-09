@@ -142,7 +142,7 @@ $(document).ready(function () {
             else if (source == "3") {
                 baseUrl = 'https://alertario.rio.rj.gov.br/upload/Mapa/semfundo/radar';
                 parametrosUrl = '';
-                imagem_incremento = 2;
+                imagem_incremento = 1; // = 2;
                 immagem_maxima = 20;
             }
             else {
