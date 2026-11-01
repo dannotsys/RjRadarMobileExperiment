@@ -146,8 +146,8 @@ $(document).ready(function () {
                 immagem_maxima = 20;
             }
             else {
-                baseUrl = 'https://www.sistema-alerta-rio.com.br/upload/Mapa/semfundo/radar';
-                parametrosUrl = ''
+                baseUrl = 'https://alertario-rio-rj-gov-br.translate.goog/upload/Mapa/semfundo/radar';
+                parametrosUrl = '&_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt-BR&_x_tr_pto=wapp';
                 imagem_incremento = 1;
                 immagem_maxima = 20;
             }
